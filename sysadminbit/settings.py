@@ -26,7 +26,6 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -41,7 +40,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'django_extensions',
     'djcelery',
-    'core'
+    # 'core'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -84,7 +83,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
