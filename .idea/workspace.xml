@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sysadminbit.iws" />
@@ -35,10 +35,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="67" selection-start="152" selection-end="152" vertical-scroll-proportion="0.1865285" vertical-offset="0" max-vertical-offset="386">
+            <state line="4" column="67" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="38" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.7202073" vertical-offset="388" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -75,6 +84,7 @@
       <list>
         <option value="$PROJECT_DIR$/sysadminbit/settings.py" />
         <option value="$PROJECT_DIR$/core/models.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -283,7 +293,11 @@
       <created>1408241386656</created>
       <updated>1408241386656</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit desde pycharm3">
+      <created>1408241461207</created>
+      <updated>1408241461207</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -331,7 +345,8 @@
     </option>
     <MESSAGE value="Commit desde pycharm" />
     <MESSAGE value="Commit desde pycharm2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit desde pycharm2" />
+    <MESSAGE value="Commit desde pycharm3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit desde pycharm3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -367,7 +382,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="67" selection-start="152" selection-end="152" vertical-scroll-proportion="0.1865285" vertical-offset="0" max-vertical-offset="386">
+        <state line="4" column="67" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="38" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.7202073" vertical-offset="388" max-vertical-offset="900">
           <folding />
         </state>
       </provider>

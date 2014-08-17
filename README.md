@@ -34,7 +34,8 @@ git pull git@github.com:sysadminbit/sysadminbit.bit
 git push git@github.com:sysadminbit/sysadminbit.bit
 .
 
-
+#Actualizacion
+git remote add origin https://username:password@github.com/sysadminbit/sysadminbit.git
 
 
 
