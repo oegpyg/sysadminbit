@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'django_extensions',
     'djcelery',
-    # 'core'
+    'core'
 )
 
 MIDDLEWARE_CLASSES = (

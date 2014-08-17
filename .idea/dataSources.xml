@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4149030037">
+  <component name="DataSourceManagerImpl" format="xml" hash="3407215615">
     <data-source source="LOCAL" name="Django default" uuid="bfc415a1-0b63-4488-bee2-bc2374f986b9">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:sysadminbit</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/sysadminbit</jdbc-url>
+      <user-name>sysadminbit</user-name>
+      <user-password>df9ddf9fdfdfdfc1dfdfdff3df9adfc7df9b</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/postgresql-driver-license.txt</url>
