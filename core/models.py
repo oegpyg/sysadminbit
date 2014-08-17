@@ -6,4 +6,4 @@ class Company(models.Model):
 
 
 class Office(models.Model):
-    pass
+    Code = models.CharField(max_length=15, unique=True, null=False)
