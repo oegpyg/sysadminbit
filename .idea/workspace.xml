@@ -38,7 +38,7 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="67" selection-start="191" selection-end="191" vertical-scroll-proportion="0.373057" vertical-offset="0" max-vertical-offset="386">
+            <state line="4" column="67" selection-start="152" selection-end="152" vertical-scroll-proportion="0.1865285" vertical-offset="0" max-vertical-offset="386">
               <folding />
             </state>
           </provider>
@@ -279,7 +279,11 @@
       <created>1408240142355</created>
       <updated>1408240142355</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit desde pycharm2">
+      <created>1408241386656</created>
+      <updated>1408241386656</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -326,7 +330,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Commit desde pycharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit desde pycharm" />
+    <MESSAGE value="Commit desde pycharm2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit desde pycharm2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -362,7 +367,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="67" selection-start="191" selection-end="191" vertical-scroll-proportion="0.373057" vertical-offset="0" max-vertical-offset="386">
+        <state line="4" column="67" selection-start="152" selection-end="152" vertical-scroll-proportion="0.1865285" vertical-offset="0" max-vertical-offset="386">
           <folding />
         </state>
       </provider>
