@@ -2,3 +2,41 @@ sysadminbit
 ===========
 
 Software de multifuncional
+
+
+configuracion inicial
+=====================
+
+INSTALAR LOS SIGUIENTES PAQUETES INICIALES PARA EL SERVIDOR DE SYSADMINBIT
+
+* apt-get install python-dev gcc  postgresql python-psycopg2 git
+* pip install django
+* pip install south
+* pip install crispy-forns
+* pip install django-crispy
+* pip install django-crispy-forms
+* pip install django-extensions
+* pip install django-celery
+
+#configuracion inicial de git - de como realizar un commit inicial a github
+#crear acceso ssh mediante documentacion https://help.github.com/articles/generating-ssh-keys
+ssh -T git@github.com
+
+mkdir ./ProjectoSysadminbit/; cd ./ProjectoSysadminbit/
+git init
+git add .
+git commit -m "Instacia primera de sysadminbit"
+git remote add origin git@github.com:sysadminbit/sysadminbit.bit
+git pull origin
+git push origin master
+#O TAMBIEN SE PUEDE HACER DIRECTO SIN USAR git remote add
+git pull git@github.com:sysadminbit/sysadminbit.bit
+git push git@github.com:sysadminbit/sysadminbit.bit
+
+
+
+
+
+
+
+
