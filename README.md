@@ -32,6 +32,7 @@ git push origin master
 #O TAMBIEN SE PUEDE HACER DIRECTO SIN USAR git remote add
 git pull git@github.com:sysadminbit/sysadminbit.bit
 git push git@github.com:sysadminbit/sysadminbit.bit
+.
 
 
 
