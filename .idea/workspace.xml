@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="Actualizacion del Readme">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/languajes/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/languajes/lang_es.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+    <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/languajes/lang_es.py" afterPath="$PROJECT_DIR$/core/languajes/lang_es.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysadminbit/settings.py" afterPath="$PROJECT_DIR$/sysadminbit/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sysadminbit.iws" />
@@ -44,19 +39,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="50" column="0" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1026">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/core/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="0" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.90348524" vertical-offset="671" max-vertical-offset="1134">
+                <state line="28" column="7" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.8719723" vertical-offset="0" max-vertical-offset="1512">
                   <folding />
                 </state>
               </provider>
@@ -65,7 +51,7 @@
           <file leaf-file-name="lang_es.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="828">
+                <state line="14" column="38" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1008">
                   <folding />
                 </state>
               </provider>
@@ -84,10 +70,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="lang_es.py" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="lang_es.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="10" selection-start="852" selection-end="852" vertical-scroll-proportion="0.5803109" vertical-offset="262" max-vertical-offset="828">
+                <state line="43" column="7" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.6040609" vertical-offset="417" max-vertical-offset="1008">
                   <folding />
                 </state>
               </provider>
@@ -118,8 +104,8 @@
         <option value="$PROJECT_DIR$/sysadminbit/settings.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/core/languajes/__init__.py" />
-        <option value="$PROJECT_DIR$/core/languajes/lang_es.py" />
         <option value="$PROJECT_DIR$/core/models.py" />
+        <option value="$PROJECT_DIR$/core/languajes/lang_es.py" />
       </list>
     </option>
   </component>
@@ -234,9 +220,9 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -344,27 +330,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sysadminbit" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -390,7 +356,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sysadminbit" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -510,15 +496,19 @@
       <created>1408241605757</created>
       <updated>1408241605757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modelo de Empresa y Sucursal">
+      <created>1408260089125</created>
+      <updated>1408260089125</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -560,12 +550,20 @@
     <MESSAGE value="Commit desde pycharm2" />
     <MESSAGE value="Commit desde pycharm3" />
     <MESSAGE value="Actualizacion del Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion del Readme" />
+    <MESSAGE value="Modelo de Empresa y Sucursal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modelo de Empresa y Sucursal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sysadminbit/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="4" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="1782">
@@ -575,9 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1026">
-          <folding />
-        </state>
+        <state line="50" column="0" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models.py">
@@ -645,28 +641,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1026">
-          <folding />
-        </state>
+        <state line="50" column="0" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/languajes/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="386">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="386" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="7" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.8719723" vertical-offset="0" max-vertical-offset="1512">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.90348524" vertical-offset="671" max-vertical-offset="1134">
+        <state line="43" column="7" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.6040609" vertical-offset="417" max-vertical-offset="1008">
           <folding />
         </state>
       </provider>

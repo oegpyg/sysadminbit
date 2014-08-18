@@ -2,9 +2,31 @@ from django.db import models
 __doc__ = """
 Defaults:
 Field   Type   Length   unique
-Code    char     50      True
+Code    char     15      True
 Name    char     50      False
 """
+
+
+class Company(models.Model):
+    __doc__ = "This Schema is to multi company management"
+    engines = (('PostgresSql', 1),
+               )
+    Code = models.CharField(max_length=15, unique=True, null=False)
+    Name = models.CharField(max_length=50, null=False, blank=False)
+    Host = models.IPAddressField(null=False, blank=False)
+    Port = models.IntegerField(max_length=4, null=False, blank=False)
+    User = models.CharField(max_length=15, null=False, blank=False)
+    Password = models.CharField(max_length=50, null=False, blank=False)
+    DBName = models.CharField(max_length=15, null=False, blank=False)
+    DBEngine = models.IntegerField(choices=engines)
+
+
+class Computer(models.Model):
+    Code = models.CharField(max_length=15, unique=True, null=False)
+    Name = models.CharField(max_length=50, null=False, blank=False)
+    Office = models.CharField(max_length=15, unique=True, null=False)
+    StockDepo = models.CharField(max_length=15, unique=True, null=False)
+    Pos = models.CharField(max_length=3, null=False, blank=False)
 
 class OurSettings(models.Model):
     Code = models.CharField(max_length=15, unique=True, null=False)
@@ -54,4 +76,3 @@ class Office(models.Model):
     VIE = models.BooleanField(null=True, blank=True)
     SAB = models.BooleanField(null=True, blank=True)
     DOM = models.BooleanField(null=True, blank=True)
-

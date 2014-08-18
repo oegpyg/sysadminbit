@@ -1,9 +1,18 @@
 #encoding: utf-8
+#coding: utf-8
 lang_dict = {
-"OurSettings": "Datos de la Empresa",
-"Our Settings": "Datos de la Empresa",
+"Company": "Empresas",
 "Code": "Codigo",
 "Name": "Nombre",
+"Host": "Servidor (Host)",
+"Port": "Puerto",
+"User": "Usuario",
+"Password": u"Contraseña",
+"DBName": "Base de Datos",
+"DBEngine": "Motor de Base de Datos",
+"PosSerNr": "Punto de Venta",
+"OurSettings": "Datos de la Empresa",
+"Our Settings": "Datos de la Empresa",
 "FantasyName": "Nombre de Fantasia",
 "Fantasy Name": "Nombre de Fantasia",
 "Address": "Direccion",
@@ -16,6 +25,7 @@ lang_dict = {
 "LegalInfo": "Informacion Legal",
 "Legal Info": "Informacion Legal",
 "Geo": "Geoposicion",
+"Office": "Sucursal",
 "ShortCode": "Codigo Corto",
 "Short Code": "Codigo Corto",
 "SalesTarget": "Objetivo de Ventas",
