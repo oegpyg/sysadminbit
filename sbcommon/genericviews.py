@@ -6,16 +6,35 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
+from sbdashboard.forms import LoginForm
 import json
+import importlib
 
 class LoginCaView(View):
-    template_name = None
+    TemplatePost = None
+    TemplateGet = None
+    ModuleName = None
+    ClassName = None
 
     def get(self, request):
-        return render(request, 'sbdashboard/LoginForm.html', status=200)
+        return render(request,
+                      self.TemplateGet,
+                      {'LoginForm': LoginForm},
+                      status=200)
 
     def post(self, request):
-        print request.POST
-        return HttpResponse(json.dumps({'exitos': ['LOGIN_CORRECTO']}), mimetype='application/javascript' )
+        SbLModule = importlib.import_module(self.ModuleName)
+        SbLClass = getattr(SbLModule, self.ClassName)()
+
+        if SbLClass.authenticate(**request.POST):
+            pass
+        else:
+            pass
+        return render(request,
+                      self.TemplatePost,
+                      status=200)
+
+
+
 
 
