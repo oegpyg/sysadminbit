@@ -72,7 +72,7 @@ lang_dict = {
 "Visibility": "Visibilidad",
 "Only Record of My Office": "Solo Registros de la Sucursal",
 "All Records": "Todos los Registros",
-
+"Holiday": "Feriados",
 
 }
 

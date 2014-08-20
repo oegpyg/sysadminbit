@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/tools/DateTimeFunctions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/languajes/lang_es.py" afterPath="$PROJECT_DIR$/core/languajes/lang_es.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -39,10 +40,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/core/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="43" column="28" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.625" vertical-offset="414" max-vertical-offset="3744">
+                <state line="203" column="6" selection-start="8284" selection-end="8284" vertical-scroll-proportion="0.0" vertical-offset="3192" max-vertical-offset="3798">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DateTimeFunctions.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/core/tools/DateTimeFunctions.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="307" column="13" selection-start="7897" selection-end="7897" vertical-scroll-proportion="0.7717391" vertical-offset="5100" max-vertical-offset="5652">
                   <folding />
                 </state>
               </provider>
@@ -70,10 +80,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="lang_es.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="lang_es.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="16" selection-start="611" selection-end="611" vertical-scroll-proportion="0.51952463" vertical-offset="0" max-vertical-offset="1512">
+                <state line="74" column="1" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.6943973" vertical-offset="923" max-vertical-offset="1512">
                   <folding />
                 </state>
               </provider>
@@ -104,8 +114,9 @@
         <option value="$PROJECT_DIR$/sysadminbit/settings.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/core/languajes/__init__.py" />
-        <option value="$PROJECT_DIR$/core/models.py" />
         <option value="$PROJECT_DIR$/core/languajes/lang_es.py" />
+        <option value="$PROJECT_DIR$/core/models.py" />
+        <option value="$PROJECT_DIR$/core/tools/DateTimeFunctions.py" />
       </list>
     </option>
   </component>
@@ -128,7 +139,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -139,7 +150,61 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -174,6 +239,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/tools" />
       <recent name="$PROJECT_DIR$/core/languajes" />
     </key>
   </component>
@@ -440,7 +506,11 @@
       <created>1408510092409</created>
       <updated>1408510092409</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Grupos de Acceso, updates, logueo de eventos de usuario">
+      <created>1408512629533</created>
+      <updated>1408512629533</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -492,19 +562,13 @@
     <MESSAGE value="Actualizacion del Readme" />
     <MESSAGE value="Modelo de Empresa y Sucursal" />
     <MESSAGE value="Grupos de Acceso" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grupos de Acceso" />
+    <MESSAGE value="Grupos de Acceso, updates, logueo de eventos de usuario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grupos de Acceso, updates, logueo de eventos de usuario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="828">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sysadminbit/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="4" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="1782">
@@ -590,16 +654,23 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="386" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models.py">
+    <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="28" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.625" vertical-offset="414" max-vertical-offset="3744">
+        <state line="29" column="38" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1512">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/languajes/lang_es.py">
+    <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="611" selection-end="611" vertical-scroll-proportion="0.51952463" vertical-offset="0" max-vertical-offset="1512">
+        <state line="203" column="6" selection-start="8284" selection-end="8284" vertical-scroll-proportion="0.0" vertical-offset="3192" max-vertical-offset="3798">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/tools/DateTimeFunctions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="307" column="13" selection-start="7897" selection-end="7897" vertical-scroll-proportion="0.7717391" vertical-offset="5100" max-vertical-offset="5652">
           <folding />
         </state>
       </provider>

@@ -200,3 +200,6 @@ class AccessGroupCustomRow(models.Model):
     Name = models.CharField(max_length="50", null=False, blank=False)
     Access = models.IntegerField(max_length="1", choices=access)
 
+
+class Holiday(models.Model):
+    pass
