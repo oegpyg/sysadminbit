@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'crispy_forms',
     'django_extensions',
     'djcelery',
-    # 'core'
+    'sbdashboard',
+    'core'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -89,6 +90,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
+# Additional locations of static files
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(__file__), '..', 'GlobalStatic').replace('\\','/'),
 )
+
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
