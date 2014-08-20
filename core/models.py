@@ -48,6 +48,9 @@ class LogSettingsRow(models.Model):
     Mode = models.IntegerField(max_length="1", choices=modes)
 
 
+class SerNrControl(models.Model):
+    pass
+
 class Company(models.Model):
     __doc__ = "This Schema is to multi company management"
     engines = (('PostgresSql', 1),
