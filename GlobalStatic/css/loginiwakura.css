@@ -1,0 +1,67 @@
+body
+{
+    background: url('/static/images/network_space.jpg');
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.login-title
+{
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 5%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+label
+{
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+form
+{
+    width: 250px;
+    margin: 0 auto;
+}
+
+form.login input[type="text"], form.login input[type="password"], form.login select
+{
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background: 0;
+    border: 0;
+    border-bottom: 1px solid #FFFFFF;
+    outline: 0;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    outline: 0;
+}
+
+.form-control::-moz-placeholder {
+    color: #ffffff;
+}
+.form-control:-ms-input-placeholder {
+    color: #ffffff;
+}
+.form-control::-webkit-input-placeholder {
+    color: #ffffff;
+
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+}
+
+
