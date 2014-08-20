@@ -38,7 +38,14 @@ git push git@github.com:sysadminbit/sysadminbit.bit
 git remote add origin https://username:password@github.com/sysadminbit/sysadminbit.git
 
 
-
-
+South
+======
+* Hacer un syncdb sin ninguna app
+* Migrar una app de manera inicial
+python manage.py schemamigration core --initial
+python manage.py migrate core
+* Por cada actualizacion
+python manage.py schemamigration core --auto
+python manage.py migrate core
 
 
