@@ -16,7 +16,7 @@ lang_dict = {
 "LogSettings": "Opciones de Historia de Registros",
 "Simple": "Sencillo",
 "Version Logging": "Logueo con Versiones",
-"SerNrControl": "Control de Numeros Seriales",
+"SerNrControl": "Control de Numeros de Serie",
 "Company": "Empresas",
 "Code": "Codigo",
 "Name": "Nombre",

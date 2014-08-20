@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/languajes/lang_es.py" afterPath="$PROJECT_DIR$/core/languajes/lang_es.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sysadminbit.iws" />
@@ -486,7 +485,11 @@
       <created>1408514296779</created>
       <updated>1408514296779</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Control de Numeros de Serie">
+      <created>1408514530866</created>
+      <updated>1408514530866</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -540,7 +543,8 @@
     <MESSAGE value="Grupos de Acceso" />
     <MESSAGE value="Grupos de Acceso, updates, logueo de eventos de usuario" />
     <MESSAGE value="Funciones de Fecha y Hora" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funciones de Fecha y Hora" />
+    <MESSAGE value="Control de Numeros de Serie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Control de Numeros de Serie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
