@@ -76,3 +76,87 @@ class Office(models.Model):
     VIE = models.BooleanField(null=True, blank=True)
     SAB = models.BooleanField(null=True, blank=True)
     DOM = models.BooleanField(null=True, blank=True)
+
+
+class AccessGroup(models.Model):
+    def number():
+        no = AccessGroup.objects.count()
+        if no == None:
+            return 1
+        else:
+            return no + 1
+    internalId = models.IntegerField(max_length=6, unique=True, default=number)
+    Code = models.CharField(max_length="15", unique=True, primary_key=True)
+    Name = models.CharField(max_length=50, null=False, blank=False)
+    accesstype = (
+        (1, 'By Default Without Access'),
+        (2, 'By Default With Total Access')
+    )
+    ModuleAccess = models.IntegerField(max_length=1, choices=accesstype)
+    RecordAccess = models.IntegerField(max_length=1, choices=accesstype)
+    ReportAccess = models.IntegerField(max_length=1, choices=accesstype)
+    RoutineAccess = models.IntegerField(max_length=1, choices=accesstype)
+
+
+class AccessGroupModuleRow(models.Model):
+    __doc__ = "This is for allow or deny privileges to entire Module"
+    access = (
+        (1, 'Denied'),
+        (2, 'Allowed'),
+    )
+    masterId = models.ForeignKey(AccessGroup, related_name='+')
+    Module = models.CharField(max_length="40")
+    Access = models.IntegerField(max_length="1", choices=access)
+
+
+class AccessGroupRecordRow(models.Model):
+    __doc__ = """This is for allow or deny access to a Record
+    Example: Allow access to Record Item, but not give access to Stock Module
+    Another Example: Allow access to Record Invoice but only access to Records of My Office
+    """
+    access = (
+        (1, 'Denied'),
+        (2, 'Allowed'),
+        (3, 'View Only'),
+    )
+    visibility = (
+        (1, 'Only Record of My Office'),
+        (2, 'All Records'),
+    )
+    masterId = models.ForeignKey(AccessGroup, related_name='+')
+    Module = models.CharField(max_length="40")
+    Access = models.IntegerField(max_length="1", choices=access)
+    Visibility = models.IntegerField(max_length="1", choices=visibility)
+
+
+class AccessGroupReportRow(models.Model):
+    __doc__ = """This is for allow or deny access to a Report
+    Example: Allow access to Invoice List but only access to Records of My Office
+    Options: Allow view, print and export data
+    """
+    access = (
+        (1, 'Denied'),
+        (2, 'View Only'),
+        (3, 'View and Print'),
+        (4, 'View, Print and Export'),
+    )
+    visibility = (
+        (1, 'Only Record of My Office'),
+        (2, 'All Records'),
+    )
+    masterId = models.ForeignKey(AccessGroup, related_name='+')
+    Module = models.CharField(max_length="40")
+    Access = models.IntegerField(max_length="1", choices=access)
+    Visibility = models.IntegerField(max_length="1", choices=visibility)
+
+
+class AccessGroupRoutineRow(models.Model):
+    __doc__ = "To all routines you need give access one by one"
+    access = (
+        (1, 'Denied'),
+        (2, 'Allowed'),
+    )
+    masterId = models.ForeignKey(AccessGroup, related_name='+')
+    Module = models.CharField(max_length="40")
+    Access = models.IntegerField(max_length="1", choices=access)
+
