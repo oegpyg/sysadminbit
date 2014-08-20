@@ -1,0 +1,21 @@
+.selectable .ui-selecting { background: #FECA40; }
+.selectable .ui-selected { background: #F39814; color: white; }
+.selectable { list-style-type: none; margin: 0; padding-bottom: 70px; width: 450px; }
+.selectable li { margin: 3px; padding: 1px; float: left; width: 100px; height: 100px; font-size: 1em; text-align: center; }
+.siml_hide {
+    z-index: 1;
+    width: 0;
+    left: 10px;
+    position: relative;
+}
+
+.btn_overn {
+    z-index: 999;
+    position: relative;
+
+}
+
+.btn_on_rigth {
+    float: right;
+    opacity: .2;
+}
