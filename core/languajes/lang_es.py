@@ -1,6 +1,21 @@
 #encoding: utf-8
 #coding: utf-8
 lang_dict = {
+"SystemSettings": "Opciones del Sistema",
+"UseUpperCaseCode": "Usar Mayusculas en Campos Codigo",
+"ThousandSep": "Separador de Miles",
+"DecimalSep": "Separador de Decimales",
+"DateFormat": "Formato de Fecha",
+"DateSep": "Separador de Fechas",
+"InterpolateReportLines": "Intercalar color en lineas de reportes",
+"DocumentHandling": "Documentos",
+"Pre-Printed": "Pre-Impreso",
+"Blank Paper":"Papel en Blanco",
+"ErrorReport": "Reporte de Errores",
+"EventLog": "Log de Eventos",
+"LogSettings": "Opciones de Historia de Registros",
+"Simple": "Sencillo",
+"Version Logging": "Logueo con Versiones",
 "Company": "Empresas",
 "Code": "Codigo",
 "Name": "Nombre",

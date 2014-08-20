@@ -7,6 +7,47 @@ Name    char     50      False
 """
 
 
+class SystemSettings(models.Model):
+    datetypes = ((1, '31/12/2014'),
+                 (2, '12/31/2014'),
+                 (3, '2014/12/31'))
+    documentH = ((1, 'Pre-Printed'),
+                 (2, 'Blank Paper'))
+    UseUpperCaseCode = models.BooleanField()
+    ThousandSep = models.CharField(max_length=1, default='.')
+    DecimalSep = models.CharField(max_length=1, default=',')
+    DateFormat = models.IntegerField(max_length=1, choices=datetypes)
+    DateSep = models.CharField(max_length=1, default='/')
+    InterpolateReportLines = models.BooleanField()
+    DocumentHandling = models.IntegerField(max_length=1, choices=documentH)
+    ErrorReport = models.EmailField(blank=True)
+
+
+class EventLog(models.Model):
+    TableName = models.CharField(max_length="60")
+    recInternalId = models.BigIntegerField()
+    oldId = models.BigIntegerField()
+    newId = models.BigIntegerField()
+    TransDate = models.DateField(auto_now=True, auto_now_add=True)
+    TransTime = models.TimeField(auto_now=True, auto_now_add=True)
+    User = models.CharField(max_length=15, null=False, blank=False)
+    Data = models.TextField()
+
+
+class LogSettings(models.Model):
+    Active = models.BooleanField()
+
+
+class LogSettingsRow(models.Model):
+    modes = (
+        (1, 'Simple'),
+        (2, 'Version Logging'),
+    )
+    masterId = models.ForeignKey(LogSettings, related_name='+')
+    Record = models.CharField(max_length="50", null=False, blank=False)
+    Mode = models.IntegerField(max_length="1", choices=modes)
+
+
 class Company(models.Model):
     __doc__ = "This Schema is to multi company management"
     engines = (('PostgresSql', 1),
@@ -28,6 +69,7 @@ class Computer(models.Model):
     StockDepo = models.CharField(max_length=15, unique=True, null=False)
     Pos = models.CharField(max_length=3, null=False, blank=False)
 
+
 class OurSettings(models.Model):
     Code = models.CharField(max_length=15, unique=True, null=False)
     Name = models.CharField(max_length=50, null=False, blank=False)
@@ -42,14 +84,6 @@ class OurSettings(models.Model):
     Geo = models.CharField(max_length=50, null=True, blank=True)
     StartDate = models.DateField(null=True)
     LegalInfo = models.CharField(max_length=50, null=True, blank=True)
-
-
-    def __unicode__(self):
-        return "%s - %s" % (self.Code, self.Name)
-
-    def DataSearch(self):
-        """:todo: retornar como un gettext"""
-        return "Datos de la Empresa"
 
 
 class Office(models.Model):
@@ -79,14 +113,7 @@ class Office(models.Model):
 
 
 class AccessGroup(models.Model):
-    def number():
-        no = AccessGroup.objects.count()
-        if no == None:
-            return 1
-        else:
-            return no + 1
-    internalId = models.IntegerField(max_length=6, unique=True, default=number)
-    Code = models.CharField(max_length="15", unique=True, primary_key=True)
+    Code = models.CharField(max_length="15", unique=True)
     Name = models.CharField(max_length=50, null=False, blank=False)
     accesstype = (
         (1, 'By Default Without Access'),
@@ -105,7 +132,7 @@ class AccessGroupModuleRow(models.Model):
         (2, 'Allowed'),
     )
     masterId = models.ForeignKey(AccessGroup, related_name='+')
-    Module = models.CharField(max_length="40")
+    Module = models.CharField(max_length="40", null=False, blank=False)
     Access = models.IntegerField(max_length="1", choices=access)
 
 
@@ -124,7 +151,7 @@ class AccessGroupRecordRow(models.Model):
         (2, 'All Records'),
     )
     masterId = models.ForeignKey(AccessGroup, related_name='+')
-    Module = models.CharField(max_length="40")
+    Name = models.CharField(max_length="50", null=False, blank=False)
     Access = models.IntegerField(max_length="1", choices=access)
     Visibility = models.IntegerField(max_length="1", choices=visibility)
 
@@ -145,7 +172,7 @@ class AccessGroupReportRow(models.Model):
         (2, 'All Records'),
     )
     masterId = models.ForeignKey(AccessGroup, related_name='+')
-    Module = models.CharField(max_length="40")
+    Name = models.CharField(max_length="50", null=False, blank=False)
     Access = models.IntegerField(max_length="1", choices=access)
     Visibility = models.IntegerField(max_length="1", choices=visibility)
 
@@ -157,6 +184,19 @@ class AccessGroupRoutineRow(models.Model):
         (2, 'Allowed'),
     )
     masterId = models.ForeignKey(AccessGroup, related_name='+')
-    Module = models.CharField(max_length="40")
+    Name = models.CharField(max_length="50", null=False, blank=False)
+    Access = models.IntegerField(max_length="1", choices=access)
+
+
+class AccessGroupCustomRow(models.Model):
+    __doc__ = """This is for give especial access
+    Example: Boss need approved PO, you need add CanApprovePurchaseOrder
+    """
+    access = (
+        (1, 'Denied'),
+        (2, 'Allowed'),
+    )
+    masterId = models.ForeignKey(AccessGroup, related_name='+')
+    Name = models.CharField(max_length="50", null=False, blank=False)
     Access = models.IntegerField(max_length="1", choices=access)
 
