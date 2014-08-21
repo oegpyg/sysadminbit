@@ -26,6 +26,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = '/sbd/'
+
 # Application definition
 
 INSTALLED_APPS = (

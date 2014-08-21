@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.core import signing
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.response import TemplateResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
@@ -26,13 +26,19 @@ class LoginCaView(View):
         SbLModule = importlib.import_module(self.ModuleName)
         SbLClass = getattr(SbLModule, self.ClassName)()
 
-        if SbLClass.authenticate(**request.POST):
-            pass
+        if SbLClass.authenticate(request):
+            return redirect('SbDashboard')
+            # return render(request,
+            #           self.TemplatePost,
+            #           status=200)
         else:
-            pass
-        return render(request,
-                      self.TemplatePost,
+            lg = LoginForm({'username': None, 'password': None})
+
+            return render(request,
+                      self.TemplateGet,
+                      { 'LoginForm':  lg },
                       status=200)
+
 
 
 

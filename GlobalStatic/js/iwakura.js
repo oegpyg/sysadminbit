@@ -227,21 +227,7 @@ var hacer_tables = {
 }
 
 
-var control_submit = {
-    no_enter: function(classname) {
-        $(classname).keypress(function(e){
-            if ( e.which == 13 ) return false;
-            if ( e.which == 13 ) e.preventDefault();
-        });
-    }
-}
 
-var esconder_comunes = {
-    identificadores: function(ids){
-        $(ids).hide();
-    }
-
-}
 
 var control_ui = {
     deshabilitar_botones: function(clase){

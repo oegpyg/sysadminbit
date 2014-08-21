@@ -6,10 +6,10 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, MultiField, Div
 
 class LoginForm(forms.Form):
-    username = forms.CharField(widget=forms.TextInput(attrs={'required': 'required', 'class': 'form-control input-lg', 'placeholder': 'Usuario'}), required=True, label='')
-    password = forms.CharField(widget=forms.TextInput(attrs={'required': 'required', 'class': 'form-control input-lg', 'placeholder': 'Clave'}), required=True, label='')
-    company = forms.ChoiceField( label='', choices=(('SYSADMINBIT', 'SYSADMINBIT'),), required=True,widget=forms.Select(attrs={'class': 'form-control input-lg'}))
-    remember = forms.BooleanField(label='Recuerdame', initial=False)
+    username = forms.CharField(widget=forms.TextInput(attrs={'required': 'required', 'class': 'form-control input-lg', 'placeholder': 'Users'}), required=True, label='', error_messages={'required': 'Authentication Error'})
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'required': 'required', 'class': 'form-control input-lg', 'placeholder': 'Password'}), required=True, label='', error_messages={'required': 'Authentication Error'})
+    company = forms.ChoiceField( label='', choices=(('SYSADMINBIT', 'SYSADMINBIT'),), required=True,widget=forms.Select(attrs={'class': 'form-control input-lg'}), error_messages={'required': 'Authentication Error'})
+    remember = forms.BooleanField(label='RememberMe', initial=False, error_messages={'required': 'Authentication Error'})
 
     def __init__(self, *args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
@@ -26,7 +26,6 @@ class LoginForm(forms.Form):
                 )
             ),
             ButtonHolder(
-                    Submit('submit', 'AUTENTICAR', css_class='btn btn-lg btn-primary btn-block')
+                    Submit('submit', 'ENTER', css_class='btn btn-lg btn-primary btn-block')
                 ),
         )
-
