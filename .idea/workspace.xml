@@ -81,7 +81,7 @@
           <file leaf-file-name="decorators.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/core/decorators.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="85" column="40" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.25" vertical-offset="1392" max-vertical-offset="2016">
+                <state line="86" column="56" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.2826087" vertical-offset="1392" max-vertical-offset="2016">
                   <folding />
                 </state>
               </provider>
@@ -94,7 +94,7 @@
           <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/core/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="131" column="9" selection-start="5784" selection-end="5784" vertical-scroll-proportion="0.25" vertical-offset="2214" max-vertical-offset="4104">
+                <state line="160" column="7" selection-start="6927" selection-end="6927" vertical-scroll-proportion="0.375" vertical-offset="2664" max-vertical-offset="4104">
                   <folding />
                 </state>
               </provider>
@@ -584,7 +584,11 @@
       <created>1408918155648</created>
       <updated>1408918155648</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="accessgroup">
+      <created>1408918382644</created>
+      <updated>1408918382644</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -754,14 +758,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="9" selection-start="5784" selection-end="5784" vertical-scroll-proportion="0.25" vertical-offset="2214" max-vertical-offset="4104">
+        <state line="160" column="7" selection-start="6927" selection-end="6927" vertical-scroll-proportion="0.375" vertical-offset="2664" max-vertical-offset="4104">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="40" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.25" vertical-offset="1392" max-vertical-offset="2016">
+        <state line="86" column="56" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.2826087" vertical-offset="1392" max-vertical-offset="2016">
           <folding />
         </state>
       </provider>
