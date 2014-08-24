@@ -2,6 +2,7 @@ __author__ = 'og'
 from core.models import AccessGroup as AG, AccessGroupModuleRow, AccessGroupRecordRow, AccessGroupReportRow, \
     AccessGroupRoutineRow, AccessGroupCustomRow
 
+
 class AccessGroup():
     __doc__ = """This method is of get all access for the current user
     param @userAccessGroup Code is defined in the userprofile Ex. = SYS
