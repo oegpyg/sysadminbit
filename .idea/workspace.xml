@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="tab">
+    <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalStatic/js/iwakura.js" afterPath="$PROJECT_DIR$/GlobalStatic/js/iwakura.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysadminbit/settings.py" afterPath="$PROJECT_DIR$/sysadminbit/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" afterPath="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sysadminbit.iws" />
-    <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,10 +63,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iwakura.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="iwakura.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GlobalStatic/js/iwakura.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="27" selection-start="565" selection-end="565" vertical-scroll-proportion="0.72386056" vertical-offset="0" max-vertical-offset="74574">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="74178">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sbwindows.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbwindows.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="31" selection-start="204" selection-end="204" vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="882">
               <folding />
             </state>
           </provider>
@@ -106,6 +114,7 @@
         <option value="$PROJECT_DIR$/sysadminbit/settings.py" />
         <option value="$PROJECT_DIR$/GlobalStatic/js/sbutils.js" />
         <option value="$PROJECT_DIR$/GlobalStatic/js/iwakura.js" />
+        <option value="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" />
       </list>
     </option>
   </component>
@@ -212,7 +221,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Confirmation" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -537,7 +546,11 @@
       <created>1408904355806</created>
       <updated>1408904355806</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="modules manage">
+      <created>1408904632032</created>
+      <updated>1408904632032</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -552,14 +565,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32362458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32200646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27010623" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32847896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27010623" sideWeight="0.67799354" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -594,17 +607,13 @@
     <MESSAGE value="Control de Numeros de Serie" />
     <MESSAGE value="tab" />
     <MESSAGE value="modificacion en sbutils y iwakura" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificacion en sbutils y iwakura" />
+    <MESSAGE value="modules manage" />
+    <option name="LAST_COMMIT_MESSAGE" value="modules manage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/languajes/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="386" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/tools/DateTimeFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="307" column="13" selection-start="7897" selection-end="7897" vertical-scroll-proportion="10.01087" vertical-offset="0" max-vertical-offset="5652" />
@@ -709,7 +718,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GlobalStatic/js/iwakura.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="27" selection-start="565" selection-end="565" vertical-scroll-proportion="0.72386056" vertical-offset="0" max-vertical-offset="74574">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="74178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbwindows.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="31" selection-start="204" selection-end="204" vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="882">
           <folding />
         </state>
       </provider>
