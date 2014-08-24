@@ -26,7 +26,6 @@ class AccessGroup():
     ALLOWED = 2
 
     def __init__(self, userAccessGroup):
-
         self.ag = AG.objects.get(Code=userAccessGroup)
         self.ModulesAccess = self.ag.ModuleAccess
         self.RecordsAccess = self.ag.RecordAccess
@@ -84,7 +83,7 @@ class AccessGroup():
         return self.__routines__.get(routinename, self.DENIED)
 
     def getRecordVisibility(self, recordname):
-        __doc__ = """On call record firts check visibility example salesman need see Invoice but
+        __doc__ = """On call record list firts check visibility example salesman need see Invoice but
         he view reocords read only"""
         return self.__records_visibility__.get(recordname, self.ALL_RECORDS)
 
