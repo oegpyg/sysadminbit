@@ -20,46 +20,58 @@ $(document).ready(function(){
             modules = data;
         }
     });
-
-    $('#sb-search-modules').on('focus',function(){
-        var DataSearch = '<input style="width:97%;" type="text" id="DataSearch">';
-        DataSearch+= '<div class="widget-body" style="width:99%;height:300px;">' +
-            '<table id="DataSearch" class="table table-striped table-bordered table-hover linked"></table>'+
-            '</div>';
-        table = $('table#DataSearch');
-                $.each(modules, function( key, module ) {
-                    $.each(module, function(index, val){
-                        table.append('<tr class="hide run"><td style="">'+key+'</td><td class="" data-module="'+val[0]+'">'+val[1]+'</td></tr>')
-                    });
-                });
-        $('.run').bind('click', function(){
-            ListWindow($(this).find('td').eq(1).text(),
-                $(this).find('td').eq(0).text(),
-                $(this).find('td').eq(1).attr('data-module')
-            );
-            return false;
+    //por ahora cargo a mano modules
+    modules = {"Ventas": [
+                           ["ItemGroup", "Grupos de Articulo"],
+                           ["ItemTaxGroup", "Origen de Articulo"],
+                           ["Item", "Articulos"]
+                         ],
+               "Standard":[
+                           ["OurSettings", "Datos de la Empresa"],
+                           ["Brand", "Marcas"],
+                           ["Manufacturer", "Fabricantes"],
+                           ["Account", "Cuentas"],
+                           ["CredCardType", "Tipos de Tarjeta de Credito"],
+                           ["PayMode", "Formas de Pago"],
+                           ["DiscountMap", "Plan de Descuentos"],
+                           ["DiscountDeal", "Acuerdos de Descuento"],
+                           ["Office", "Sucursales"],
+                           ["PayTerm", "Terminos de Pago"],
+                           ["GroupCode", "Grupos de Proveedores"],
+                           ["Supplier", "Proveedores"],
+                           ["VATCode", "Codigos de IVA"],
+                           ["Package", "Presentaciones"],
+                           ["Unit", "Unidades"],
+                           ["BasePriceFormula", "Formulas de Precio Base"],
+                           ["AccessGroup", "Grupos de Acceso"],
+                           ["User", "Usuarios"]
+                          ]
+    };
+    table = $('table#DataSearch');
+        $.each(modules, function( key, module ) {
+            $.each(module, function(index, val){
+                table.append('<tr class="hide run"><td style="">'+key+'</td><td class="" data-module="'+val[0]+'">'+val[1]+'</td></tr>')
         });
-        DataSearchFn();
-
+    });
+    $('#sb-search-modules').on('focus',function(){
+        list = $('table#DataSearch');
+        $('#sb-search-modules').on('keyup',function(event){
+            event.preventDefault();
+            if ($(this).val().length > 3){
+                list.find('tr').addClass('hide');
+                buscar = $(this).val();
+                if(jQuery.trim(buscar) != ''){
+                    $("table#DataSearch tr:icontains('" + buscar + "')").removeClass('hide');
+                }
+            }
+            if ($(this).val().length < 3){
+                list.find('tr').addClass('hide');
+            }
+        });
     });
 
 });
 
-
-function DataSearchFn(){
-    /*Busqueda de Modulos
-    * */
-    $('#DataSearch').on('keyup',function(event){
-        event.preventDefault();
-        if ($(this).val().length > 3){
-            $('table#DataSearch tr').addClass('hide');
-            buscar = $(this).val();
-            if(jQuery.trim(buscar) != ''){
-                $("table#DataSearch tr:icontains('" + buscar + "')").removeClass('hide');
-            }
-        }
-    });
-}
 function ListWindow(title, module, record){
     var l = window.location;
     var html = '';
