@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 
 __doc__ = """Manejador de la pizarra principal de cada usuario"""
-from sbdashboard.decorators import accessprofile
+from core.decorators import accessprofile
 
 class SbLogin(object):
     def authenticate(self, request):

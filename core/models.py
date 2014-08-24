@@ -136,6 +136,8 @@ class AccessGroup(models.Model):
     ReportAccess = models.IntegerField(max_length=1, choices=accesstype)
     RoutineAccess = models.IntegerField(max_length=1, choices=accesstype)
 
+    def __unicode__(self):
+        return "%s %s" % (self.Code, self.Name)
 
 class AccessGroupModuleRow(models.Model):
     __doc__ = "This is for allow or deny privileges to entire Module"
@@ -144,7 +146,7 @@ class AccessGroupModuleRow(models.Model):
         (2, 'Allowed'),
     )
     masterId = models.ForeignKey(AccessGroup, related_name='+')
-    Module = models.CharField(max_length="40", null=False, blank=False)
+    Name = models.CharField(max_length="40", null=False, blank=False)
     Access = models.IntegerField(max_length="1", choices=access)
 
 
@@ -167,6 +169,8 @@ class AccessGroupRecordRow(models.Model):
     Access = models.IntegerField(max_length="1", choices=access)
     Visibility = models.IntegerField(max_length="1", choices=visibility)
 
+    def __unicode__(self):
+        return "%s %s" % (self.masterId.Code, self.Name)
 
 class AccessGroupReportRow(models.Model):
     __doc__ = """This is for allow or deny access to a Report
