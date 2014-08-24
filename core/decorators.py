@@ -84,6 +84,8 @@ class AccessGroup():
         return self.__routines__.get(routinename, self.DENIED)
 
     def getRecordVisibility(self, recordname):
+        __doc__ = """On call record firts check visibility example salesman need see Invoice but
+        he view reocords read only"""
         return self.__records_visibility__.get(recordname, self.ALL_RECORDS)
 
     def canViewModule(self, modulename):
