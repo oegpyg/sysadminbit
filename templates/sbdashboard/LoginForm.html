@@ -13,7 +13,7 @@
 			    	<h3 class="login-title">INGRESAR</h3>
 			 	</div>
 			  	<div class="panel-body">
-			    	<form class="form-horizontal login" accept-charset="UTF-8" role="form" action="{% url "SbLogin" %}" method="POST">{% csrf_token %}
+			    	<form id="sb-form-login" class="form-horizontal login" accept-charset="UTF-8" role="form" action="{% url "SbLogin" %}" method="POST">{% csrf_token %}
                     <fieldset>
                         {% crispy LoginForm %}
 			    	</fieldset>
@@ -23,4 +23,17 @@
 		</div>
 	</div>
 </div>
+{% endblock %}
+
+{% block JSContainer %}
+    <script type="text/javascript">
+         $('#sb-form-login').hide();
+         setTimeout(function(){
+             SbUtils.EffectsSH('#sb-form-login', 'explode', 'show')
+         }, 300);
+
+         $('#sb-form-login').on('submit', function(){
+             SbUtils.EffectsSH('#sb-form-login', 'fold', 'hide')
+         });
+    </script>
 {% endblock %}
