@@ -274,5 +274,22 @@ var SbUtils = {
     },
     Dragg: function(selector) {
         $(selector).draggable();
+    },
+    EffectsSH: function(selector, sEffect, type) {
+          // most effect types need no options passed by default
+          var options = {};
+          // some effects have required parameters
+          if ( sEffect === "scale" ) {
+            options = { percent: 100 };
+          } else if ( sEffect === "size" ) {
+            options = { to: { width: 280, height: 185 } };
+          }
+          // run the effect
+        if (type === 'show') {
+            $(selector).show( sEffect,options,500);
+        } else {
+            $(selector).hide( sEffect,options,500);
+        }
+
     }
 }
