@@ -245,5 +245,34 @@ var SbUtils = {
                 widgets: [ 'uitheme', 'zebra', 'filter']
             });
         }
+    },
+    Shortcuts: function(selector, type)
+    {
+        $(window).bind('keydown', function(event) {
+            if (event.ctrlKey || event.metaKey) {
+                switch (String.fromCharCode(event.which).toLowerCase()) {
+//                case 's':
+//                    event.preventDefault();
+//                    alert('ctrl-s');
+//                    break;
+                case 'f':
+                    event.preventDefault();
+                    if (type === 'focus') {
+                        $(selector).focus();
+                    } else {
+                        null;
+                    }
+
+                    break;
+//                case 'g':
+//                    event.preventDefault();
+//                    alert('ctrl-g');
+//                    break;
+                }
+            }
+        });
+    },
+    Dragg: function(selector) {
+        $(selector).draggable();
     }
 }
