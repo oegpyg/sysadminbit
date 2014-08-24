@@ -74,7 +74,6 @@ class AccessGroup():
             for row in agroutines:
                 self.__routines__[row.Name] = row.Access
 
-
     def canOpenRecord(self, recordname):
         return self.__records__.get(recordname, self.DENIED)
 
@@ -91,6 +90,11 @@ class AccessGroup():
         return self.__modules__.get(modulename, 1)
 
     def canDo(self, actionname, default=True):
+        __doc__ = """This method is to custom valid access
+        Example=
+        if not canDo('InvalidateInvoice'):
+            return "User is not authorized for this action"
+        """
         agcustom = AccessGroupCustomRow.objects.filter(masterId=self.ag.id)
         for row in agcustom:
             if row.Name == actionname:

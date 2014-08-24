@@ -5,7 +5,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/sysadminbit</jdbc-url>
       <user-name>sysadminbit</user-name>
-      <user-password>dfe6dfc5dfd8dfcfdfc4dfd0dfc5dfe6dfcbdfc7dfcbdfd9</user-password>
+      <user-password>df9ddf9fdfdfdfc1dfdfdff3df9adfc7df9b</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/postgresql-driver-license.txt</url>
