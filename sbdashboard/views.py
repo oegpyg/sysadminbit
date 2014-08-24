@@ -33,16 +33,16 @@ class Dashboard(View):
     def post(self, request):
         pass
 
-@csrf_exempt
-def WSmodules(request):
-    modules = {'Standard': [], 'Ventas': []}
-    #modules['Standard'] = []
-    for j, k in modules.iteritems():
-        for model in get_models(get_app(j)):
-            if "__DataSearch__" in dir(model):
-                #l = model()
-                #modules[j].append([model.__name__, l.DataSearch()])
-                modules[j].append([model.__name__, model.__DataSearch__])
-    data = json.dumps(modules)
-    return HttpResponse(data, mimetype='application/json')
+#@csrf_exempt
+#def WSmodules(request):
+#    modules = {'Standard': [], 'Ventas': []}
+#    #modules['Standard'] = []
+#    for j, k in modules.iteritems():
+#        for model in get_models(get_app(j)):
+#            if "__DataSearch__" in dir(model):
+#                #l = model()
+#                #modules[j].append([model.__name__, l.DataSearch()])
+#                modules[j].append([model.__name__, model.__DataSearch__])
+#    data = json.dumps(modules)
+#    return HttpResponse(data, mimetype='application/json')
 
