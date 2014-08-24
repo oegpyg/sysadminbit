@@ -8,7 +8,7 @@ from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, MultiFie
 class LoginForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'required': 'required', 'class': 'form-control input-lg', 'placeholder': 'Users'}), required=True, label='', error_messages={'required': 'Authentication Error'})
     password = forms.CharField(widget=forms.PasswordInput(attrs={'required': 'required', 'class': 'form-control input-lg', 'placeholder': 'Password'}), required=True, label='', error_messages={'required': 'Authentication Error'})
-    company = forms.ChoiceField( label='', choices=(('SYSADMINBIT', 'SYSADMINBIT'),), required=True,widget=forms.Select(attrs={'class': 'form-control input-lg'}), error_messages={'required': 'Authentication Error'})
+    company = forms.ChoiceField(label='', choices=(('SYSADMINBIT', 'SYSADMINBIT'),), required=True, widget=forms.Select(attrs={'class': 'form-control input-lg'}), error_messages={'required': 'Authentication Error'})
     remember = forms.BooleanField(label='RememberMe', initial=False, error_messages={'required': 'Authentication Error'})
 
     def __init__(self, *args, **kwargs):
@@ -26,6 +26,6 @@ class LoginForm(forms.Form):
                 )
             ),
             ButtonHolder(
-                    Submit('submit', 'ENTER', css_class='btn btn-lg btn-primary btn-block')
-                ),
+                Submit('submit', 'ENTER', css_class='btn btn-lg btn-primary btn-block')
+            ),
         )

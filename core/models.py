@@ -65,13 +65,21 @@ class Company(models.Model):
     DBEngine = models.IntegerField(choices=engines)
 
 
-class Computer(models.Model):
+class Computers(models.Model):
     Code = models.CharField(max_length=15, unique=True, null=False)
     Name = models.CharField(max_length=50, null=False, blank=False)
     Office = models.CharField(max_length=15, unique=True, null=False)
     StockDepo = models.CharField(max_length=15, unique=True, null=False)
     Pos = models.CharField(max_length=3, null=False, blank=False)
 
+class Printers(models.Model):
+    Code = models.CharField(max_length=15, unique=True, null=False)
+    Name = models.CharField(max_length=50, null=False, blank=False)
+    URICups = models.URLField(max_length=50, null=False, blank=False)
+    Address = models.IPAddressField(null=True)
+    PrintServer = models.BooleanField(default=False)
+    ServerAddress = models.IPAddressField(null=True)
+    Comment = models.TextField(null=True, blank=True)
 
 class OurSettings(models.Model):
     Code = models.CharField(max_length=15, unique=True, null=False)
@@ -87,7 +95,7 @@ class OurSettings(models.Model):
     Geo = models.CharField(max_length=50, null=True, blank=True)
     StartDate = models.DateField(null=True)
     LegalInfo = models.CharField(max_length=50, null=True, blank=True)
-
+    RUC = models.CharField(max_length=10, null=False, blank=False)
 
 class Office(models.Model):
     Code = models.CharField(max_length=15, unique=True, null=False)
@@ -106,13 +114,13 @@ class Office(models.Model):
     PriceDeal = models.CharField(max_length=15, null=True, blank=True)
     DiscountDeal = models.CharField(max_length=15, null=True, blank=True)
     #To use for Automatic Reposition
-    LUN = models.BooleanField(null=True, blank=True)
-    MAR = models.BooleanField(null=True, blank=True)
-    MIE = models.BooleanField(null=True, blank=True)
-    JUE = models.BooleanField(null=True, blank=True)
-    VIE = models.BooleanField(null=True, blank=True)
-    SAB = models.BooleanField(null=True, blank=True)
-    DOM = models.BooleanField(null=True, blank=True)
+    LUN = models.BooleanField(default=False)
+    MAR = models.BooleanField(default=False)
+    MIE = models.BooleanField(default=False)
+    JUE = models.BooleanField(default=False)
+    VIE = models.BooleanField(default=False)
+    SAB = models.BooleanField(default=False)
+    DOM = models.BooleanField(default=False)
 
 
 class AccessGroup(models.Model):
@@ -205,4 +213,5 @@ class AccessGroupCustomRow(models.Model):
 
 
 class Holiday(models.Model):
+    #this need move to base
     pass
