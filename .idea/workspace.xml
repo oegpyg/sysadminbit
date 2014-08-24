@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sbdashboard/views.py" afterPath="$PROJECT_DIR$/sbdashboard/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -38,7 +39,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="0" selection-start="8842" selection-end="8842" vertical-scroll-proportion="0.0" vertical-offset="3425" max-vertical-offset="4014">
+            <state line="10" column="28" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4032">
               <folding />
             </state>
           </provider>
@@ -83,7 +84,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sbdashboard/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.9362832" vertical-offset="173" max-vertical-offset="828">
+            <state line="44" column="71" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.87256634" vertical-offset="173" max-vertical-offset="846">
               <folding />
             </state>
           </provider>
@@ -122,7 +123,6 @@
         <option value="$PROJECT_DIR$/core/languajes/__init__.py" />
         <option value="$PROJECT_DIR$/core/tools/DateTimeFunctions.py" />
         <option value="$PROJECT_DIR$/core/languajes/lang_es.py" />
-        <option value="$PROJECT_DIR$/core/models.py" />
         <option value="$PROJECT_DIR$/sbdashboard/forms.py" />
         <option value="$PROJECT_DIR$/sysadminbit/urls.py" />
         <option value="$PROJECT_DIR$/sbdashboard/dashboardmanag.py" />
@@ -131,6 +131,7 @@
         <option value="$PROJECT_DIR$/GlobalStatic/js/sbutils.js" />
         <option value="$PROJECT_DIR$/GlobalStatic/js/iwakura.js" />
         <option value="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" />
+        <option value="$PROJECT_DIR$/core/models.py" />
         <option value="$PROJECT_DIR$/sbdashboard/views.py" />
       </list>
     </option>
@@ -567,7 +568,11 @@
       <created>1408906651182</created>
       <updated>1408906651182</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="verificar wsmodules">
+      <created>1408907027800</created>
+      <updated>1408907027800</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -625,7 +630,8 @@
     <MESSAGE value="tab" />
     <MESSAGE value="modificacion en sbutils y iwakura" />
     <MESSAGE value="modules manage" />
-    <option name="LAST_COMMIT_MESSAGE" value="modules manage" />
+    <MESSAGE value="verificar wsmodules" />
+    <option name="LAST_COMMIT_MESSAGE" value="verificar wsmodules" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -680,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="0" selection-start="8842" selection-end="8842" vertical-scroll-proportion="0.0" vertical-offset="3425" max-vertical-offset="4014">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sbdashboard/Dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="52" selection-start="3109" selection-end="3109" vertical-scroll-proportion="-14.333333" vertical-offset="657" max-vertical-offset="1206">
@@ -726,7 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="24" selection-start="582" selection-end="582" vertical-scroll-proportion="0.5097345" vertical-offset="0" max-vertical-offset="565">
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -738,9 +737,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4032">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sbdashboard/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.9362832" vertical-offset="173" max-vertical-offset="828">
+        <state line="44" column="71" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.87256634" vertical-offset="173" max-vertical-offset="846">
           <folding />
         </state>
       </provider>

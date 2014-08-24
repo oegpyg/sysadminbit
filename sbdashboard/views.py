@@ -39,9 +39,10 @@ def WSmodules(request):
     #modules['Standard'] = []
     for j, k in modules.iteritems():
         for model in get_models(get_app(j)):
-            if "DataSearch" in dir(model):
-                l = model()
-                modules[j].append([model.__name__, l.DataSearch()])
+            if "__DataSearch__" in dir(model):
+                #l = model()
+                #modules[j].append([model.__name__, l.DataSearch()])
+                modules[j].append([model.__name__, model.__DataSearch__])
     data = json.dumps(modules)
     return HttpResponse(data, mimetype='application/json')
 

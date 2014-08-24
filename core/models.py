@@ -8,6 +8,7 @@ Name    char     50      False
 
 
 class SystemSettings(models.Model):
+    __DataSearch__ = "SystemSettings"
     datetypes = ((1, '31/12/2014'),
                  (2, '12/31/2014'),
                  (3, '2014/12/31'))
