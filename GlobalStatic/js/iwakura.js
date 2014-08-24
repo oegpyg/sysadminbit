@@ -1,45 +1,13 @@
+//added with og 2014-08-24
+
+//oef added with og 2014-08-24
+
+
 var gusuo = null;
 //control de intervalos
 var lintg = null;
 
 var utils = {
-    form_json: function(arr){
-        newo = {};
-        $.each(arr, function(i, item){
-            newo[item.name] = item.value;
-        });
-        return newo;
-    },
-    diac: function (){
-        dateo = new Date();
-        var curr_date = dateo.getDate();
-        var curr_month = dateo.getMonth() + 1; //Months are zero based
-        var curr_year = dateo.getFullYear();
-        return curr_date + "/" + curr_month + "/" + curr_year
-    },
-    diai: function (plus_day){
-        dateo = new Date();
-        var curr_date = dateo.getDate();
-        if (plus_day != undefined){
-            curr_date += plus_day
-        }
-
-//        console.log(curr_date);
-        if (curr_date.toString().length != 2 ) {
-            curr_date = '0'+curr_date;
-        }
-        var curr_month = dateo.getMonth() + 1; //Months are zero based
-        var curr_year = dateo.getFullYear();
-        return curr_year + "-" + curr_month + "-" + curr_date;
-    },
-
-    horac: function (){
-        dateo = new Date();
-        var hora = dateo.getHours();
-        var minutos = dateo.getMinutes();
-        var segundos = dateo.getSeconds();
-        return hora + ":" + minutos + ":" + segundos
-    },
     producto_ac: function() {
         datosf = JSON.parse(localStorage.getItem('datos'));
         $( "input[name=artcod]").keyup(function() {
@@ -378,7 +346,7 @@ var impresiones = {
             html2imp: true,
             url_fetch: url_fetch
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
                 if (response.exitos) {
                     $.each(response.exitos, function(i, val){
@@ -391,7 +359,7 @@ var impresiones = {
                         mensajes.exitos(val);
                     });
                 }
-            esperar.descubrir();
+            esperar.Unwait();
          }, 'json' );
     }
 }
@@ -795,8 +763,8 @@ pedidos_control = {
 //            $(".tab_t0").addClass('in');
             $(".tab_t1").click();
         }
-        esperar.cubrir_especifico('#ped_det_b');
-        esperar.cubrir_especifico('#catcte_cli');
+        esperar.WaitInElement('#ped_det_b');
+        esperar.WaitInElement('#catcte_cli');
 
         elet = $(elemento);
         $.get(url,
@@ -848,7 +816,7 @@ pedidos_control = {
 
     },
     listar: function(url, parametros, para_bloques) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = parametros +'&fecha_i=' + $('#fecha_inicio_f').val() + '&fecha_f=' + $('#fecha_fin_f').val();
         $.get(url, parametros, function(response){
             if (para_bloques) {
@@ -861,13 +829,13 @@ pedidos_control = {
                 $("#ped_det_b").html('');
             }
 
-            esperar.descubrir();
+            esperar.Unwait();
 
         }, 'html' );
     },
 
     listar_mix: function(url, parametros, titulo) {
-        esperar.cubrir_especifico('#panel-generico-body');
+        esperar.WaitInElement('#panel-generico-body');
         $.get(url, parametros, function(response){
             $('#panel-generico-titulo').html(titulo);
             $('#panel-generico-body').html(response);
@@ -883,7 +851,7 @@ pedidos_control = {
             box_numero: box_numero,
             bloque_cod: bloque_cod
         }
-        esperar.cubrir_especifico('#panel-generico-body');
+        esperar.WaitInElement('#panel-generico-body');
         $.get(url, parametros, function(response){
             $('#panel-generico-titulo').html('PEDIDOS EN EL BOX '+ box_numero+' PARA EL BLOQUE '+ bloque_cod);
             $('#panel-generico-body').html(response);
@@ -900,7 +868,7 @@ pedidos_control = {
             bloque_cod: bloque_cod
         }
         $('#panel-reparto-pedidos').show();
-        esperar.cubrir_especifico('#panel-reparto-pedidos-body');
+        esperar.WaitInElement('#panel-reparto-pedidos-body');
         $.get(url, parametros, function(response){
             $('#panel-reparto-pedidos-titulo').html('PEDIDOS EN EL REPARTO '+ reparto_numero +' PARA EL BLOQUE '+ bloque_cod);
             $('#panel-reparto-pedidos-body').html(response);
@@ -915,7 +883,7 @@ pedidos_control = {
             bloque_cod: bloque_cod
         }
         $('#panel-pedidos-problemas').show();
-        esperar.cubrir_especifico('#panel-pedidos-problemas-body');
+        esperar.WaitInElement('#panel-pedidos-problemas-body');
         $.get(url, parametros, function(response){
             $('#panel-pedidos-problemas-titulo').html('PROCESO DE BORRADO DEL BLOQUE '+ bloque_cod);
             $('#panel-pedidos-problemas-body').html(response);
@@ -931,7 +899,7 @@ pedidos_control = {
             bloque_cod: bloque_cod
         }
         pedele = $('#pedido_numero_'+pedido_numero);
-        esperar.cubrir_especifico(pedele.next().children());
+        esperar.WaitInElement(pedele.next().children());
         $.get(url, parametros, function(response){
             pedele.next().children().html(response);
         }, 'html' );
@@ -945,7 +913,7 @@ pedidos_control = {
             reparto_numero: reparto_numero
         }
         pedele = $('#pedido_numero_'+pedido_numero);
-        esperar.cubrir_especifico(pedele.next().children());
+        esperar.WaitInElement(pedele.next().children());
         $.get(url, parametros, function(response){
             pedele.next().children().html(response);
         }, 'html' );
@@ -1239,7 +1207,7 @@ pedidos_control = {
                 });
             }
             pedidos_control.listar(url, 'listar_pedidos=true&verificar=true');
-            esperar.descubrir();
+            esperar.Unwait();
             notificaciones.noti_popup('NOTIFICACIONES', nhtml_apro);
         }, 'json');
     },
@@ -1265,7 +1233,7 @@ pedidos_control = {
                         nhtml,
                         'danger');
                 }
-                esperar.descubrir();
+                esperar.Unwait();
                 ui_control.list_entr();
             }, 'json');
     }
@@ -1555,21 +1523,21 @@ ui_control = {
             return true }
     },
     draw_global_distribuicion: function(url){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, {
             global_distribucion: true
         }, function(response){
               $('#global_distribucion').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     draw_global_facturacion: function(url){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, {
             global_facturacion: true
         }, function(response){
               $('#global_facturacion').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     traer_marcados_generic: function(query, searchs){
@@ -1671,7 +1639,7 @@ it_control = {
 
 warehouse_control = {
     generar_bloque: function(url, parametros) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -1693,7 +1661,7 @@ warehouse_control = {
                    });
                         
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('NOTIFICACION', nhtml_apro);
         }, 'json');
 
@@ -1704,7 +1672,7 @@ warehouse_control = {
 //            bloque_definitivo: true,
 //            bloque_cod: bloque_cod
 //        }
-//        esperar.cubrir('body');
+//        esperar.Wait('body');
 //        var nhtml_apro = '';
 //        $.post(url, parametros, function(response){
 //             if (response.exitos) {
@@ -1729,7 +1697,7 @@ warehouse_control = {
 //                   });
 //
 //               }
-//               esperar.descubrir();
+//               esperar.Unwait();
 //               notificaciones.noti_popup('BLOQUES', nhtml_apro);
 //              }, 'json');
 //    },
@@ -1737,7 +1705,7 @@ warehouse_control = {
     on_cheq_pedidos: function() {
 //        $('#encola_bloque').off();
 //        $('#encola_bloque').on('click', function(event){
-            esperar.cubrir('body');
+            esperar.Wait('body');
             var guardar = false;
             var borblo_obj = {};
             var para_sum = [
@@ -1773,7 +1741,7 @@ warehouse_control = {
                 });
                 warehouse_control.min_sumario_bloque(para_sum, '#sumario_borrador_bloque');
             }
-            esperar.descubrir();
+            esperar.Unwait();
             warehouse_control.tildar_marcados();
 //        });
     },
@@ -1815,15 +1783,15 @@ warehouse_control = {
     },
 
     borrador_bloque_controles: function(url, parametros, dquery){
-        esperar.cubrir_especifico('#pedidos_control');
+        esperar.WaitInElement('#pedidos_control');
         $.get(url, parametros, function(response){
               $(dquery).html(response);
-              esperar.descubrir_especifico();
+              esperar.UnwaitInElement();
          }, 'html' );
     },
 
     tildar_marcados: function() {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         borblo = localStorage.getItem('borrador_bloques');
         if (borblo) {
             borblo_obj  = JSON.parse(borblo);
@@ -1831,22 +1799,22 @@ warehouse_control = {
                 $('tr[data-pedido-numero='+i+'] td:last-child').html('<h4>MARCADO PARA BORRADOR BLOQUE</4>');
             });
         }
-        esperar.descubrir();
+        esperar.Unwait();
     },
 
     borrar_marcados_bloque: function(){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         localStorage.removeItem('borrador_bloques');
         notificaciones.noti_popu_faster('PEDIDOS BORRADOR BLOQUE',
                 'PEDIDOS BORRADOS', 'info'
         );
-        esperar.descubrir();
+        esperar.Unwait();
         $('#lped_procesados').click();
 
     },
 
     generar_borrador_bloque: function(url, vencimiento) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
 
         borblo = localStorage.getItem('borrador_bloques');
@@ -1894,7 +1862,7 @@ warehouse_control = {
                             '</div>';
                     });
                 }
-                esperar.descubrir();
+                esperar.Unwait();
                 notificaciones.noti_popup('BORRADOR BLOQUE',
                     nhtml_apro);
             }, 'json');
@@ -1903,7 +1871,7 @@ warehouse_control = {
             notificaciones.noti_popu_faster('PEDIDOS BORRADOR BLOQUE',
                 'NO TIENE PEDIDOS MARCADOS', 'error'
             );
-            esperar.descubrir();
+            esperar.Unwait();
         }
     },
 
@@ -1913,7 +1881,7 @@ warehouse_control = {
             bloque_cod: bloque_cod
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -1935,7 +1903,7 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('BLOQUE', nhtml_apro);
               }, 'json');
 
@@ -1943,23 +1911,23 @@ warehouse_control = {
     },
 
     min_sumario_bloque: function(parametros, query){
-        esperar.cubrir_especifico(query);
+        esperar.WaitInElement(query);
         $.get('/ware_house/sumarios/', parametros, function(response){
               $(query).html(response);
          }, 'html' );
     },
 
     listar: function(url, parametros, target){
-        esperar.cubrir_especifico(target);
+        esperar.WaitInElement(target);
         $.get(url, parametros, function(response){
               $(target).html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
 
     listar_bloques_problemas: function(url){
-        esperar.cubrir_especifico('#f_tab');
+        esperar.WaitInElement('#f_tab');
         parametros = {
             'listar_bloques_problemas': true
         }
@@ -1970,18 +1938,18 @@ warehouse_control = {
 
     bloque_ui: function(url, parametros) {
         ui_control.show_ftab();
-        esperar.cubrir_especifico('#bloque_list');
+        esperar.WaitInElement('#bloque_list');
         $.get(url, parametros, function(response){
               $('#bloque_list').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     bodegas_ui: function(url, parametros){
         ui_control.show_ftab();
-        esperar.cubrir_especifico('#bloque_list');
+        esperar.WaitInElement('#bloque_list');
         $.get(url, parametros, function(response){
               $('#bloque_list').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     bloque_estructura: function(url, bloque_cod) {
@@ -1989,7 +1957,7 @@ warehouse_control = {
             bloque_cod: bloque_cod,
             bloque_estructura: true
         }
-        esperar.cubrir_especifico('#bloque_distribucion');
+        esperar.WaitInElement('#bloque_distribucion');
         $.get(url, pars, function(response){
             $('#bloque_distribucion').html(response);
             ui_control.show_stab();
@@ -1998,7 +1966,7 @@ warehouse_control = {
     },
 
     requerimiento_productos: function(url, bloque_cod) {
-        esperar.cubrir_especifico('#bloque_list_panel');
+        esperar.WaitInElement('#bloque_list_panel');
         parametros = {
             requerimiento_productos: true,
             bloque_cod: bloque_cod
@@ -2011,7 +1979,7 @@ warehouse_control = {
     },
 
     generar_bloque_requerimientos: function(url, bloque_cod) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             generar_bloque_requerimientos: true,
             bloque_cod: bloque_cod
@@ -2040,7 +2008,7 @@ warehouse_control = {
                    warehouse_control.estado_generar_bloque_req_ui();
                    warehouse_control.estado_generar_bloque_requerimientos(url, bloque_cod);
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('GENERACION', nhtml_apro);
         }, 'json');
     },
@@ -2094,7 +2062,7 @@ warehouse_control = {
     },
 
     limpiar_bloque_problemas: function(url, bloque_cod) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             limpiar_bloque_problemas: true,
             bloque_cod: bloque_cod
@@ -2119,7 +2087,7 @@ warehouse_control = {
                                '</div>';
                    });
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('BLOQUE', nhtml_apro);
         }, 'json');
     },
@@ -2129,14 +2097,14 @@ warehouse_control = {
             bloque_cod: bloque_cod,
             armar_box: true
         }
-        esperar.cubrir_especifico('#bloque_list_panel');
+        esperar.WaitInElement('#bloque_list_panel');
         $.get(url, pars, function(response){
             $('#bloque_list_panel_titulo').html('DISTRIBUCION DE PEDIDOS POR BOXES');
             $('#bloque_list_panel').html(response);
          }, 'html' );
     },
     borrar_pedidos_box: function(url, bloque_cod, box_cod) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [
             { name: 'borrar_pedidos_box', value: true },
             { name: 'bloque_cod', value: bloque_cod },
@@ -2168,7 +2136,7 @@ warehouse_control = {
                     mensajes.error(val);
                 });
             }
-            esperar.descubrir();
+            esperar.Unwait();
 
 
          }, 'json' );
@@ -2177,7 +2145,7 @@ warehouse_control = {
     enviar_a_box: function(url, bloque_cod){
         var options;
         var select = $('#blo_select_peds');
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [{name: 'bloque_cod', value: bloque_cod},
             { name: 'enviar_a_box', value: true}];
         values = $('#blo_select_peds').val();
@@ -2186,7 +2154,7 @@ warehouse_control = {
             notificaciones.noti_popu_faster('ERROR',
             'DEBE SELECCIONAR AL MENOS UN BOX',
             'danger');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
 
@@ -2194,7 +2162,7 @@ warehouse_control = {
             notificaciones.noti_popu_faster('ERROR',
             'DEBE SELECCIONAR AL MENOS UN PEDIDO',
             'danger');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
 
@@ -2212,7 +2180,7 @@ warehouse_control = {
             $( "li.ui-selected").removeClass('ui-selected');
             $('#box_selectable li[data-box_cod='+ response.box_cod +'] .box_peso').text(response.box_peso);
             $('#box_selectable li[data-box_cod='+ response.box_cod +'] .box_vol').text(response.box_volumen);
-            esperar.descubrir();
+            esperar.Unwait();
             //actualizar lista de pedidos
             warehouse_control.armar_box(url,bloque_cod);
          }, 'json' );
@@ -2230,7 +2198,7 @@ warehouse_control = {
         });
 
         $('#panel-reparto-volumen').show();
-        esperar.cubrir_especifico('#panel-reparto-volumen-body');
+        esperar.WaitInElement('#panel-reparto-volumen-body');
 
         $.get(url, parametros, function(response){
               $('#panel-reparto-volumen-body').html(response);
@@ -2242,11 +2210,11 @@ warehouse_control = {
             armar_repartos: true,
             bloque_cod: bloque_cod
         }
-        esperar.cubrir_especifico('#bloque_list_panel');
+        esperar.WaitInElement('#bloque_list_panel');
         $.get(url, parametros, function(response){
               $('#bloque_list_panel_titulo').html('ARMADO DE REPARTOS BLOQUE '+bloque_cod);
               $('#bloque_list_panel').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
@@ -2255,11 +2223,11 @@ warehouse_control = {
             listar_repartos: true,
             bloque_cod: bloque_cod
         }
-        esperar.cubrir_especifico('#bloque_list_panel');
+        esperar.WaitInElement('#bloque_list_panel');
         $.get(url, parametros, function(response){
               $('#bloque_list_panel_titulo').html('REPARTOS PARA EL BLOQUE '+bloque_cod);
               $('#bloque_list_panel').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
@@ -2270,11 +2238,11 @@ warehouse_control = {
             reparto_numero: reparto_numero,
             bloque_cod: bloque_cod
         }
-        esperar.cubrir_especifico('#panel-reparto-detalle-body');
+        esperar.WaitInElement('#panel-reparto-detalle-body');
         $.get(url, parametros, function(response){
               $('#panel-reparto-detalle-titulo').html('DETALLE DEL REPARTO ' + reparto_numero);
               $('#panel-reparto-detalle-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
@@ -2288,7 +2256,7 @@ warehouse_control = {
             $.each($('#id_reparto_boxes').val(), function(i, val){
                 parametros.push({name: 'boxs_cods', value: val});
             });
-            esperar.cubrir_especifico('#panel-reparto-prioridad-body');
+            esperar.WaitInElement('#panel-reparto-prioridad-body');
             $.get(url, parametros, function(response){
                 $('#panel-reparto-prioridad-titulo').html('PRIORIDAD PARA ENTREGA DE REPARTOS');
                 $('#panel-reparto-prioridad-body').html(response);
@@ -2315,7 +2283,7 @@ warehouse_control = {
             parametros.push({name: 'prioridad', value: $(val).val()});
         });
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -2339,7 +2307,7 @@ warehouse_control = {
                    });
 
             }
-            esperar.descubrir();
+            esperar.Unwait();
             notificaciones.noti_popup('mensajes', nhtml_apro);
         }, 'json');
     },
@@ -2349,7 +2317,7 @@ warehouse_control = {
             bloque_cod: bloque_cod,
             bloque_sumario: true
         }
-        esperar.cubrir_especifico('#bloque_list_panel');
+        esperar.WaitInElement('#bloque_list_panel');
         $.get(url, pars, function(response){
             $('#bloque_list_panel_titulo').html('SUMARIO DEL BLOQUE '+bloque_cod);
             $('#bloque_list_panel').html(response);
@@ -2364,7 +2332,7 @@ warehouse_control = {
                 { name: 'bloque_cod', value: bloque_cod },
                 { name: 'por_pedido', value: por_pedido }
         ];
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -2386,13 +2354,13 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('MOVIMIENTOS', nhtml_apro);
               }, 'json');
     },
 
     crear_reparto: function(url, bloque_cod) {
-        esperar.cubrir_especifico('#bloque_list_panel');
+        esperar.WaitInElement('#bloque_list_panel');
         parametros = [{name:'crear_reparto', value: true},
             {name:'bloque_cod', value: bloque_cod}
         ];
@@ -2405,7 +2373,7 @@ warehouse_control = {
             notificaciones.noti_popu_faster('ERROR',
             'DEBE SELECCIONAR AL MENOS CAMION y 3 RESPONSABLES',
             'danger');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
 
@@ -2413,7 +2381,7 @@ warehouse_control = {
             notificaciones.noti_popu_faster('ERROR',
             'DEBE SELECCIONAR 3 O MAS RESPONSABLES',
             'danger');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
 
@@ -2421,7 +2389,7 @@ warehouse_control = {
             notificaciones.noti_popu_faster('ERROR',
             'DEBE SELECCIONAR AL MENOS UN BOX',
             'danger');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
 
@@ -2471,7 +2439,7 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('ERROR', nhtml_apro);
               }, 'json');
     },
@@ -2549,7 +2517,7 @@ warehouse_control = {
 
                     Array.prototype.push.apply(parametros, pedidos_numeros);
 
-                    esperar.cubrir('body');
+                    esperar.Wait('body');
                     var nhtml_apro = '';
                     $.post(url, parametros, function(response){
                          if (response.exitos) {
@@ -2566,7 +2534,7 @@ warehouse_control = {
                              );
                              warehouse_control.update_bloque_statics('/ware_house/sumarios/', bloque_cod);
                           }
-                           esperar.descubrir();
+                           esperar.Unwait();
                            notificaciones.noti_popup('BLOQUE', nhtml_apro);
                             $('.modal-backdrop').remove();
                           },
@@ -2578,7 +2546,7 @@ warehouse_control = {
     },
     distribuir_faltantes: function(url, pk){
         ui_control.show_stab();
-        esperar.cubrir_especifico('#bloque_distribucion');
+        esperar.WaitInElement('#bloque_distribucion');
         $.get(url,
             {
                 pedido_pk: pk,
@@ -2604,13 +2572,13 @@ warehouse_control = {
             dist_cant_faltantes: true
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.post(url, parametros, function(response){
             if (response.exitos) {
                 $.each(response.exitos, function(i, val){
                     mensajes.exitos(val);
                 });
-                esperar.descubrir();
+                esperar.Unwait();
             }
             if (response.error) {
                 $.each(response.error, function(i, val){
@@ -2672,7 +2640,7 @@ warehouse_control = {
             }
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
 
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
@@ -2700,7 +2668,7 @@ warehouse_control = {
                                '<h4 class="alert-heading">MOVIMIENTO</h4>' +
                                '<p>REALIZADO</p>' +
                                '</div>';
-                 esperar.descubrir();
+                 esperar.Unwait();
               }
               if (response.error) {
                   $.each(response.error, function(ind, val) {
@@ -2712,7 +2680,7 @@ warehouse_control = {
                    });
                   $('#mov_'+response.mov_pk).val('');
                   $('#mov_'+response.mov_pk).focus();
-                  esperar.descubrir();
+                  esperar.Unwait();
                }
                notificaciones.noti_popup('PALLETS', nhtml_apro);
               }, 'json');
@@ -2726,7 +2694,7 @@ warehouse_control = {
             valor: valor
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -2747,7 +2715,7 @@ warehouse_control = {
                      $('#blo_pallets').html('<div class="alert alert-danger"><strong>YA SE REALIZO LA COMPROBACION DE LOS PALLETS</strong></div>');
                  }
                  notificaciones.noti_popup('PALLETS', 'OK');
-                 esperar.descubrir();
+                 esperar.Unwait();
               }
               if (response.error) {
                   $.each(response.error, function(ind, val) {
@@ -2759,14 +2727,14 @@ warehouse_control = {
                    });
                   $('#pall_'+response.pall_numero).val('');
                   $('#pall_'+response.pall_numero).focus();
-                  esperar.descubrir();
+                  esperar.Unwait();
                }
                notificaciones.noti_popup('PALLETS', nhtml_apro);
               }, 'json');
     },
 
     confirmar_blo_box: function(url, bloque_cod, box_numero, valor, articulo_cod, tipo) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             bloque_box_dist_manag: true,
             bloque_cod: bloque_cod,
@@ -2791,20 +2759,20 @@ warehouse_control = {
                      $('#articulo_badge_'+response.articulo_cod).text(response.cantidad_confirmada);
                      $('input[data-articulo-cod='+response.articulo_cod + ']').val('');
                      $('input[data-articulo-cod='+response.articulo_cod + ']').focus();
-                     esperar.descubrir();
+                     esperar.Unwait();
                  }
                  if (response.completo) {
                      $('input[data-articulo-cod='+response.articulo_cod + ']').parent().parent().html(
                          '<div class="alert alert-succuss"><span class="glyphicon glyphicon-check"></span></div>'
                      );
                      $('#table_blo_box_dist input').eq(0).focus();
-                     esperar.descubrir();
+                     esperar.Unwait();
                  }
                  if (response.confirmados) {
                      if (response.tipo == 'box' || response.tipo == 'picking') {
                          $('#blo_box_dist_manag').html('<br><br><br><br><br><br><div class="alert alert-danger"><strong>YA SE REALIZO EL TRASPASO DE LOS ARTICULOS</strong></div>');
                      }
-                     esperar.descubrir();
+                     esperar.Unwait();
                  }
                  notificaciones.noti_popup(response.tipo, 'OK');
               }
@@ -2818,7 +2786,7 @@ warehouse_control = {
                    });
                   $('input[data-articulo-cod='+response.articulo_cod + ']').val('');
                   $('input[data-articulo-cod='+response.articulo_cod + ']').focus();
-                  esperar.descubrir();
+                  esperar.Unwait();
                }
                notificaciones.noti_popup(response.tipo, nhtml_apro);
               }, 'json');
@@ -2871,7 +2839,7 @@ warehouse_control = {
     },
 
     bloque_box_distribuicion: function(url, bloque_cod, box_numero, tipo){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             blo_box_dist_manag: true,
             bloque_cod: bloque_cod,
@@ -2881,13 +2849,13 @@ warehouse_control = {
 
         $.get(url, parametros, function(response){
               $('#blo_box_dist_manag').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
 
     bloque_rep_distribuicion: function(url, bloque_cod, box_numero, tipo){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             blo_rep_dist_manag: true,
             bloque_cod: bloque_cod,
@@ -2896,19 +2864,19 @@ warehouse_control = {
 
         $.get(url, parametros, function(response){
               $('#blo_rep_dist_manag').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
     print_rep_conf: function(url){
         $.get(url, {print_rep_conf:true}, function(response){
               console.log(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
     borrar_bloque: function(url, bloque_cod) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         parametros = {
             borrar_bloque: true,
@@ -2934,14 +2902,14 @@ warehouse_control = {
                                '</div>';
                    });
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('', nhtml_apro);
               }, 'json');
 
     },
 
     armar_cajas: function(url, pall_numero ){
-        esperar.cubrir_especifico('#panel_palletsmanag_body');
+        esperar.WaitInElement('#panel_palletsmanag_body');
         parametros = {
             armar_cajas: true,
             pall_numero: pall_numero
@@ -2955,7 +2923,7 @@ warehouse_control = {
     },
 
     confirmar_armar_cajas: function(url, pall_numero ){
-        esperar.cubrir('.body');
+        esperar.Wait('.body');
         mensajes.ini_arri();
         parametros = {
             confirmar_armar_cajas: true,
@@ -2974,12 +2942,12 @@ warehouse_control = {
                     mensajes.error(val);
                 });
             }
-            esperar.descubrir();
+            esperar.Unwait();
          }, 'json' );
     },
 
     armar_pallets: function(url, pall_numero ){
-        esperar.cubrir_especifico('#panel_palletsmanag_body');
+        esperar.WaitInElement('#panel_palletsmanag_body');
         parametros = {
             armar_pallets: true,
             pall_numero: pall_numero
@@ -2994,7 +2962,7 @@ warehouse_control = {
 
 
     confirmar_armar_pallets: function(url, pall_numero ){
-        esperar.cubrir('.body');
+        esperar.Wait('.body');
         mensajes.ini_arri();
         parametros = {
             confirmar_armar_pallets: true,
@@ -3013,11 +2981,11 @@ warehouse_control = {
                     mensajes.error(val);
                 });
             }
-            esperar.descubrir();
+            esperar.Unwait();
          }, 'json' );
     },
     asignar_lote: function(url, pall_numero){
-        esperar.cubrir_especifico('#panel_palletsmanag_body');
+        esperar.WaitInElement('#panel_palletsmanag_body');
         parametros = {
             asignar_lote: true,
             pall_numero: pall_numero
@@ -3031,7 +2999,7 @@ warehouse_control = {
     },
 
     confirmar_asignar_lote: function(url, pall_numero ){
-        esperar.cubrir('.body');
+        esperar.Wait('.body');
         mensajes.ini_arri();
         parametros = {
             confirmar_asignar_lote: true,
@@ -3050,7 +3018,7 @@ warehouse_control = {
                     mensajes.error(val);
                 });
             }
-            esperar.descubrir();
+            esperar.Unwait();
          }, 'json' );
     },
 
@@ -3072,7 +3040,7 @@ warehouse_control = {
             aprobar_averiados: true,
             pall_numero: pall_numero
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -3094,7 +3062,7 @@ warehouse_control = {
                                '</div>';
                    });
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('', nhtml_apro);
               }, 'json');
     },
@@ -3103,13 +3071,13 @@ warehouse_control = {
             bodega_diseno: true,
             crear_bodega: true
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('.panel_bodegas_ui_title').html('CREACION DE BODEGAS');
               $('.panel_bodegas_ui_content').html(response);
               $('.panel_bodegas_ui').show();
               ui_control.hasta_pos('.panel_bodegas_ui');
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     eliminar_bodegas: function(url) {
@@ -3128,7 +3096,7 @@ warehouse_control = {
         }
         Array.prototype.push.apply(parametros, bodega_pks);
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -3151,7 +3119,7 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('INFO', nhtml_apro);
               }, 'json');
     },
@@ -3171,7 +3139,7 @@ warehouse_control = {
         }
         Array.prototype.push.apply(parametros, bodega_pks);
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -3194,7 +3162,7 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('INFO', nhtml_apro);
               }, 'json');
     },
@@ -3204,13 +3172,13 @@ warehouse_control = {
             bodega_diseno: true,
             crear_area: true
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('.panel_bodegas_ui_title').html('CREACION DE AREAS');
               $('.panel_bodegas_ui_content').html(response);
               $('.panel_bodegas_ui').show();
               ui_control.hasta_pos('.panel_bodegas_ui');
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     listar_celdas: function(url, area_pk) {
@@ -3220,14 +3188,14 @@ warehouse_control = {
             listar_celdas: true,
             area_pk: area_pk
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('#bloque_distribucion').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     eliminar_area: function(url){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [
             {name:'eliminiar_area', value: true }
         ];
@@ -3238,7 +3206,7 @@ warehouse_control = {
         if (areas.length <= 0){
             mensajes.ini_arri();
             mensajes.error('DEBE SELECCIONAR AL MENOS UN AREA');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
         Array.prototype.push.apply(parametros, areas);
@@ -3264,14 +3232,14 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('MENSAJES', nhtml_apro);
         }, 'json');
 
     },
     confirmar_movimiento_camion: function(url, bloque_cod,
                                           box_numero, reparto_numero){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [
             {name:'blo_rep_dist_manag', value: true },
             {name:'bloque_cod', value: bloque_cod },
@@ -3288,15 +3256,15 @@ warehouse_control = {
         if (articulos.length <= 0){
             mensajes.ini_arri();
             mensajes.error('DEBE SELECCIONAR UNO O MAS ARTICULOS');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
 
         if (articulos.length != $('input[name=chpro_conf_camion]').length) {
             //hay faltantes se bloquea la operacion, hasta que un
             //operador superior decida que hacer
-            esperar.descubrir();
-            esperar.cubrir('body');
+            esperar.Unwait();
+            esperar.Wait('body');
             parametros_bloqueo = [
                 {name: 'faltantes', value: true},
                 {name:'bloque_cod', value: bloque_cod },
@@ -3308,7 +3276,7 @@ warehouse_control = {
             $.get('/ware_house/bloqueo_procesos/', parametros_bloqueo, function(response){
                   $('.generic_modal .modal-body').html(response);
                   $('.generic_modal').modal('show');
-                  esperar.descubrir();
+                  esperar.Unwait();
              }, 'html' );
             return
         }
@@ -3335,7 +3303,7 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('MENSAJES', nhtml_apro);
               }, 'json');
     },
@@ -3344,11 +3312,11 @@ warehouse_control = {
             registrar_productos: true,
             bodega_pk: bodega_pk
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('REGISTRAR PRODUCTOS DESCARGADOS');
               $('#product_manag_panel .panel-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
@@ -3388,7 +3356,7 @@ warehouse_control = {
             generar_pallets: true,
             compra_numero: compra_numero
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         $.post(url, parametros, function(response){
              if (response.exitos) {
@@ -3412,7 +3380,7 @@ warehouse_control = {
                    });
                         
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('INFO', nhtml_apro);
               }, 'json');
     },
@@ -3421,14 +3389,14 @@ warehouse_control = {
             mostrar_detalle_registro: true,
             compra_numero: compra_numero
         }
-        esperar.cubrir_especifico('.mostrar_detalle_registro');
+        esperar.WaitInElement('.mostrar_detalle_registro');
         $.get(url, parametros, function(response){
               $('.mostrar_detalle_registro').html(response);
          }, 'html' );
     },
 
     anular_registro_item: function(url) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [
             {name:'anular_registro_item', value: true }
         ];
@@ -3439,7 +3407,7 @@ warehouse_control = {
         if (registro_pk.length <= 0){
             mensajes.ini_arri();
             mensajes.error('DEBE SELECCIONAR AL MENOS UN ITEM');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
         Array.prototype.push.apply(parametros, registro_pk);
@@ -3466,7 +3434,7 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('MENSAJES', nhtml_apro);
         }, 'json');
     },
@@ -3477,11 +3445,11 @@ warehouse_control = {
             bodega_pk: bodega_pk
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('ETIQUTAR PALLETS');
               $('#product_manag_panel .panel-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     listar_pallets_completos_ui: function(url, bodega_pk, pagina, ini, fin) {
@@ -3494,7 +3462,7 @@ warehouse_control = {
 
         }
 
-        esperar.cubrir_especifico('#product_manag_panel .panel-body');
+        esperar.WaitInElement('#product_manag_panel .panel-body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('PALLETS COMPLETOS');
               $('#product_manag_panel .panel-body').html(response);
@@ -3516,11 +3484,11 @@ warehouse_control = {
             bodega_pk: bodega_pk
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('PALLETS CON PROBLEMAS DE CALIDAD');
               $('#product_manag_panel .panel-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
 
     },
@@ -3535,11 +3503,11 @@ warehouse_control = {
             parametros[x_lote] = true;
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('UNIDADES SUELTAS');
               $('#product_manag_panel .panel-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
@@ -3553,16 +3521,16 @@ warehouse_control = {
             parametros['x_lote'] = true;
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('CAJAS');
               $('#product_manag_panel .panel-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
 
     imprimir_pallets_etiquetas: function(url, pall_proforma, pall_orden_compra, articulo_cod, bodega_cod) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         var nhtml_apro = '';
         parametros = {
             imprimir_pallets_etiquetas: true,
@@ -3593,19 +3561,19 @@ warehouse_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('.', nhtml_apro);
               }, 'json');
     },
     reimprimir_etiquetas_ui: function(url, bodega_pk) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             reimprimir_etiquetas: true,
             bodega_pk: bodega_pk
         }
         $.get(url, parametros, function(response){
             $('#bloque_distribucion').html(response);
-            esperar.descubrir();
+            esperar.Unwait();
             ui_control.show_stab();
          }, 'html' );
     },
@@ -3616,15 +3584,15 @@ warehouse_control = {
             bodega_pk: bodega_pk
         }
 
-        esperar.cubrir('body');
+        esperar.Wait('body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('PALLETS CONTROL CALIDAD');
               $('#product_manag_panel .panel-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     pallet_control_calidad_ui: function(url, pall_numero, bodega_cod) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             pallet_control_calidad: true,
             pall_numero: pall_numero,
@@ -3632,7 +3600,7 @@ warehouse_control = {
         }
         $.get(url, parametros, function(response){
               $('#bloque_distribucion').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
               ui_control.show_stab();
          }, 'html' );
     },
@@ -3659,7 +3627,7 @@ warehouse_control = {
             bloque_cod: bloque_cod,
             reparto_numero: reparto_numero
         }
-        esperar.cubrir_especifico('#product_manag_panel .panel-body');
+        esperar.WaitInElement('#product_manag_panel .panel-body');
         $.get(url, parametros, function(response){
               $('#product_manag_panel .panel-title').html('REGISTRO DE MOVIMIENTO REALIZADOS/A REALIZAR');
               $('#product_manag_panel .panel-body').html(response);
@@ -3672,7 +3640,7 @@ warehouse_control = {
             estado_movimientos_bloque: true,
             bloque_cod: bloque_cod
         }
-        esperar.cubrir_especifico('#product_manag_panel .panel-body');
+        esperar.WaitInElement('#product_manag_panel .panel-body');
         lintg = setInterval(function(){
             $.get(url, parametros, function(response){
                 $('#product_manag_panel .panel-title').html('REGISTRO DE MOVIMIENTO A REALIZAR');
@@ -3689,7 +3657,7 @@ warehouse_control = {
             movimiento_pk: movimiento_pk,
             bodega_pk: bodega_pk
         }
-        esperar.cubrir_especifico('#bloque_distribucion');
+        esperar.WaitInElement('#bloque_distribucion');
         $.get(url, parametros, function(response){
 //            $('#bloque_distribucion').html(response);
 //              ui_control.show_stab();
@@ -3702,14 +3670,14 @@ warehouse_control = {
             sumario_producto_movimiento: true,
             movimiento_pk: movimiento_pk
         }
-        esperar.cubrir_especifico('.detalle_sumario_movimiento');
+        esperar.WaitInElement('.detalle_sumario_movimiento');
         $.get(url, parametros, function(response){
             $('#detalle_sumario_movimiento_'+movimiento_pk).html(response);
-            esperar.descubrir_especifico();
+            esperar.UnwaitInElement();
          }, 'html' );
     },
     productos_averiados: function(url, pall_numero, bodega_cod) {
-        esperar.cubrir_especifico('#bloque_distribucion');
+        esperar.WaitInElement('#bloque_distribucion');
         parametros = {
             productos_averiados: true,
             pall_numero: pall_numero,
@@ -3721,7 +3689,7 @@ warehouse_control = {
          }, 'html' );
     },
     mover_pallets: function(url, bodega_pk) {
-        esperar.cubrir_especifico('#bloque_distribucion');
+        esperar.WaitInElement('#bloque_distribucion');
         parametros = [
            { name: 'mover_pallets', value: true },
            { name: 'bodega_pk', value: bodega_pk }
@@ -3748,14 +3716,14 @@ invoicing_control = {
         parametros = {
             listar_ordenes_impresion: true
         }
-        esperar.cubrir_especifico('#invoicing_main');
+        esperar.WaitInElement('#invoicing_main');
         $.get(url, parametros, function(response){
               $('#invoicing_main').html(response);
-              esperar.descubrir_especifico('#invoicing_main');
+              esperar.UnwaitInElement('#invoicing_main');
          }, 'html' );
     },
     preview_invoicing: function(url, numero_orden_impresion) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             preview_invoicing: true,
             numero_orden_impresion: numero_orden_impresion
@@ -3763,7 +3731,7 @@ invoicing_control = {
         $.get(url, parametros, function(response){
             $('#invoicing_content').html(response);
             ui_control.show_stab();
-            esperar.descubrir();
+            esperar.Unwait();
          }, 'html' );
 
     },
@@ -3772,7 +3740,7 @@ invoicing_control = {
             numero_orden_impresion: numero_orden_impresion,
             printing_invoicing: true
         }
-        esperar.cubrir('body');
+        esperar.Wait('body');
         mensajes.ini_arri();
         $.post(url, parametros, function(response){
             if (response.exitos) {
@@ -3782,13 +3750,13 @@ invoicing_control = {
                 $('#orden_'+ response.numero_orden_impresion).remove();
                 $('#boton_orden_'+ response.numero_orden_impresion).remove();
             }
-            esperar.descubrir();
+            esperar.Unwait();
          }, 'json' );
     }
 }
 printing_control = {
     list_imp: function(url, url_print, wait){
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             url_print: url_print,
             wait: wait
@@ -3796,11 +3764,11 @@ printing_control = {
         $.get(url, parametros, function(response){
               $('.generic_modal .modal-body').html(response);
               $('.generic_modal').modal('show');
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     },
     printing: function(url, url_print, printer, wait) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = {
             url_print: url_print,
             printer: printer,
@@ -3808,7 +3776,7 @@ printing_control = {
 
         }
         window.location = url + '?url_print='+url_print+'&printer='+printer+'&wait='+wait;
-        esperar.descubrir();
+        esperar.Unwait();
     }
 }
 
@@ -3817,7 +3785,7 @@ gusuo
 buy_control = {
     cargar_compras: function(url) {
         $('#dashboard_panel_actions_title').html('OPERACIONES DE COMPRAS');
-        esperar.cubrir_especifico('#dashboard_panel_actions_body');
+        esperar.WaitInElement('#dashboard_panel_actions_body');
         parametros = {
             'cargar_compras': true
         }
@@ -3828,7 +3796,7 @@ buy_control = {
     },
     listar_solicitudes: function(url) {
         $('#buy_manag_panel_title').html('SOLICITUDES DE COMPRAS');
-        esperar.cubrir_especifico('#buy_manag_panel_body');
+        esperar.WaitInElement('#buy_manag_panel_body');
         parametros = {
             listar_solicitudes: true
         }
@@ -3839,7 +3807,7 @@ buy_control = {
     },
     crear_solicitudes: function(url, compra_numero) {
         $('#buy_manag_panel_actions_title').html('CREAR NUEVA SOLICITUD DE COMPRAS '+ compra_numero);
-        esperar.cubrir_especifico('#buy_manag_panel_actions_body');
+        esperar.WaitInElement('#buy_manag_panel_actions_body');
         parametros = {
             crear_solicitudes: true
         }
@@ -3856,14 +3824,14 @@ buy_control = {
             mostrar_detalle_solicitud: true,
             compra_numero: compra_numero
         }
-        esperar.cubrir_especifico('#compras_detalle_panel_body');
+        esperar.WaitInElement('#compras_detalle_panel_body');
         $('#compras_detalle_panel_titulo').html('DETALLE COMPRA '+ compra_numero);
         $.get(url, parametros, function(response){
               $('#compras_detalle_panel_body').html(response);
          }, 'html' );
     },
     anular_solicitud_item: function(url) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [
             {name:'anular_solicitud_item', value: true }
         ];
@@ -3874,7 +3842,7 @@ buy_control = {
         if (comprapks.length <= 0){
             mensajes.ini_arri();
             mensajes.error('DEBE SELECCIONAR AL MENOS UN ITEM');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
         Array.prototype.push.apply(parametros, comprapks);
@@ -3901,12 +3869,12 @@ buy_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('MENSAJES', nhtml_apro);
         }, 'json');
     },
     aprobar_solicitudes: function(url, compra_numero) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [
             {name:'aprobar_solicitudes', value: true }
         ];
@@ -3919,7 +3887,7 @@ buy_control = {
             if (compra_numero.length <= 0){
                 mensajes.ini_arri();
                 mensajes.error('DEBE SELECCIONAR AL MENOS UN ITEM');
-                esperar.descubrir();
+                esperar.Unwait();
                 return
             }
             Array.prototype.push.apply(parametros, compra_numero);
@@ -3953,7 +3921,7 @@ buy_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('MENSAJES', nhtml_apro);
         }, 'json');
     },
@@ -3971,7 +3939,7 @@ buy_control = {
             if (compra_numero.length <= 0){
                 mensajes.ini_arri();
                 mensajes.error('DEBE SELECCIONAR AL MENOS UN ITEM');
-                esperar.descubrir();
+                esperar.Unwait();
                 return
             }
             Array.prototype.push.apply(parametros, compra_numero);
@@ -3980,7 +3948,7 @@ buy_control = {
         }
 
         $('#buy_manag_panel_actions_title').html('DESPACHO DE LA COMPRA ');
-        esperar.cubrir_especifico('#buy_manag_panel_actions_body');
+        esperar.WaitInElement('#buy_manag_panel_actions_body');
 
         $.get(url, parametros, function(response){
             $('#buy_manag_panel_actions_body').html(response);
@@ -3993,7 +3961,7 @@ buy_control = {
         ];
 
         $('#buy_manag_panel_actions_title').html('DESPACHO NUMERO ' + despacho_identificador);
-        esperar.cubrir_especifico('#buy_manag_panel_actions_body');
+        esperar.WaitInElement('#buy_manag_panel_actions_body');
         $.get(url, parametros, function(response){
             $('#buy_manag_panel_actions_body').html(response);
         }, 'html');
@@ -4005,7 +3973,7 @@ buy_control = {
         ];
 
         $('#despacho_actions_panel_title').html('PRESUPUESTO DESPACHO NUMERO ' + despacho_identificador);
-        esperar.cubrir_especifico('#despacho_actions_panel_body');
+        esperar.WaitInElement('#despacho_actions_panel_body');
         $.get(url, parametros, function(response){
             $('#despacho_actions_panel_body').html(response);
         }, 'html');
@@ -4018,7 +3986,7 @@ buy_control = {
             mostrar_detalle_despacho: true,
             despacho_identificador: despacho_identificador
         }
-        esperar.cubrir_especifico('#despacho_detalle_panel_body');
+        esperar.WaitInElement('#despacho_detalle_panel_body');
         $('#despacho_detalle_panel_titulo').html('DETALLE DESPACHO '+ despacho_identificador);
         $.get(url, parametros, function(response){
               $('#despacho_detalle_panel_body').html(response);
@@ -4026,7 +3994,7 @@ buy_control = {
     },
 
     anular_despacho_item: function(url, despachopk) {
-        esperar.cubrir('body');
+        esperar.Wait('body');
         parametros = [
             {name:'anular_despacho_item', value: true }
         ];
@@ -4037,7 +4005,7 @@ buy_control = {
         if (despachopks.length <= 0){
             mensajes.ini_arri();
             mensajes.error('DEBE SELECCIONAR AL MENOS UN ITEM');
-            esperar.descubrir();
+            esperar.Unwait();
             return
         }
         Array.prototype.push.apply(parametros, despachopks);
@@ -4064,7 +4032,7 @@ buy_control = {
                    });
 
                }
-               esperar.descubrir();
+               esperar.Unwait();
                notificaciones.noti_popup('MENSAJES', nhtml_apro);
         }, 'json');
     }
@@ -4073,21 +4041,21 @@ buy_control = {
 repartos_control = {
     reparto_ver_diferencas: function(url, reparto_numero) {
         $('#panel-reparto-diferencias').show();
-        esperar.cubrir_especifico('#panel-reparto-diferencias-body');
+        esperar.WaitInElement('#panel-reparto-diferencias-body');
         parametros = {
             reparto_ver_diferencias: true,
             reparto_numero: reparto_numero
         }
         $.get(url, parametros, function(response){
               $('#panel-reparto-diferencias-body').html(response);
-              esperar.descubrir();
+              esperar.Unwait();
          }, 'html' );
     }
 }
 
 common_tools = {
     cotizacion_dna: function(url, fecha) {
-        esperar.cubrir_especifico('#cotizacion_dna');
+        esperar.WaitInElement('#cotizacion_dna');
         parametros = {
             cotizacion_dna: true,
             fecha: fecha
@@ -4117,7 +4085,7 @@ common_tools = {
         });
     },
     icoterms_sumario: function(url){
-        esperar.cubrir_especifico('.icoterms_sumario');
+        esperar.WaitInElement('.icoterms_sumario');
         $.get(url, { icoterms_sumario: true }, function(response){
             $('.icoterms_sumario').html(response);
         }, 'html' );

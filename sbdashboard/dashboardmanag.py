@@ -21,5 +21,5 @@ class SbDashboard(object):
         self.username = kwargs.get('username')
 
     @accessprofile
-    def load_profile(self,request, **kwargs):
+    def load_profile(self, request, **kwargs):
         return render(request, 'sbdashboard/Dashboard.html', kwargs)

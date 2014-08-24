@@ -9,7 +9,7 @@ var SbUtils = {
         debuttons: function(selector, action){
             $(selector).prop(action, true);
         },
-        cubrir_especifico: function (ele) {
+        WaitInElement: function (ele) {
             $(ele).html('<div class=cubrir_ov><pre style="padding-top: 60px;"><h1>POR FAVOR ESPERE</h1></pre></div>');
             $('.cubrir_ov').css({
                     background:"#000 url('/static/dist/img/gears.gif') no-repeat fixed center",
@@ -22,11 +22,11 @@ var SbUtils = {
                     zIndex: 4999 // everything you want on top, gets higher z-index
             })
         },
-        descubrir_especifico: function(){
+        UnwaitInElement: function(){
             $('.cubrir_ov').remove();
         },
 
-        cubrir: function(ele) {
+        Wait: function(ele) {
             $('<div id=cubrir_ov><pre style="padding-top: 60px;"><h1>POR FAVOR ESPERE</h1></pre></div>')
                 .css({
                     position:"fixed", // ze trick
@@ -43,7 +43,7 @@ var SbUtils = {
                 }).appendTo(ele);
         },
 
-        descubrir: function(){
+        Unwait: function(){
             $('#cubrir_ov').remove();
         },
 
@@ -138,72 +138,72 @@ var SbUtils = {
     Table: {
         bt_tables: function(id_tabla){
             $.extend($.tablesorter.themes.bootstrap, {
-                            table      : 'table table-bordered',
-                            caption    : 'caption',
-                            header     : 'bootstrap-header',
-                            footerRow  : '',
-                            footerCells: '',
-                            icons      : '',
-                            sortNone   : 'bootstrap-icon-unsorted',
-                            sortAsc    : 'icon-chevron-up glyphicon glyphicon-chevron-up',
-                            sortDesc   : 'icon-chevron-down glyphicon glyphicon-chevron-down',
-                            active     : '',
-                            hover      : '',
-                            filterRow  : '',
-                            even       : '',
-                            odd        : ''
+                table      : 'table table-bordered',
+                caption    : 'caption',
+                header     : 'bootstrap-header',
+                footerRow  : '',
+                footerCells: '',
+                icons      : '',
+                sortNone   : 'bootstrap-icon-unsorted',
+                sortAsc    : 'icon-chevron-up glyphicon glyphicon-chevron-up',
+                sortDesc   : 'icon-chevron-down glyphicon glyphicon-chevron-down',
+                active     : '',
+                hover      : '',
+                filterRow  : '',
+                even       : '',
+                odd        : ''
             });
 
             $(id_tabla).tablesorter(
-                    {
-                        theme : "bootstrap",
-                        widthFixed: true,
-                        headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon!
-                        widgets : [ "uitheme", "filter", "zebra" ],
-                        widgetOptions : {
-                            zebra : ["even", "odd"],
-                            filter_reset : ".reset"
-                        }
+                {
+                    theme : "bootstrap",
+                    widthFixed: true,
+                    headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon!
+                    widgets : [ "uitheme", "filter", "zebra" ],
+                    widgetOptions : {
+                        zebra : ["even", "odd"],
+                        filter_reset : ".reset"
                     }
+                }
             ).tablesorterPager({
-            container: $(".ts-pager"),
-            cssGoto  : ".pagenum",
-            removeRows: false,
-            output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'
-                    });
+                    container: $(".ts-pager"),
+                    cssGoto  : ".pagenum",
+                    removeRows: false,
+                    output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'
+                });
         },
         big_tables: function(id_tabla){
             $.extend($.tablesorter.themes.bootstrap, {
-                            table      : 'table table-bordered',
-                            header     : 'bootstrap-header', // give the header a gradient background
-                            footerRow  : '',
-                            footerCells: '',
-                            icons      : '', // add "icon-white" to make them white; this icon class is added to the <i> in the header
-                            sortNone   : 'bootstrap-icon-unsorted',
-                            sortAsc    : 'icon-chevron-up',
-                            sortDesc   : 'icon-chevron-down',
-                            active     : '', // applied when column is sorted
-                            hover      : '', // use custom css here - bootstrap class may not override it
-                            filterRow  : '', // filter row class
-                            even       : '', // odd row zebra striping
-                            odd        : ''  // even row zebra striping
+                table      : 'table table-bordered',
+                header     : 'bootstrap-header', // give the header a gradient background
+                footerRow  : '',
+                footerCells: '',
+                icons      : '', // add "icon-white" to make them white; this icon class is added to the <i> in the header
+                sortNone   : 'bootstrap-icon-unsorted',
+                sortAsc    : 'icon-chevron-up',
+                sortDesc   : 'icon-chevron-down',
+                active     : '', // applied when column is sorted
+                hover      : '', // use custom css here - bootstrap class may not override it
+                filterRow  : '', // filter row class
+                even       : '', // odd row zebra striping
+                odd        : ''  // even row zebra striping
             });
 
             $(id_tabla).tablesorter(
-                    {
-                        theme : "bootstrap",
-                        widthFixed: true,
-                        headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon!
-                        // widget code contained in the jquery.tablesorter.widgets.js file
-                        // use the zebra stripe widget if you plan on hiding any rows (filter widget)
-                        widgets : [ "uitheme", "filter", "zebra"],
-                        widgetOptions : {
-                          zebra : ["even", "odd"],
-                          // reset filters button
-                          filter_reset : ".reset"
+                {
+                    theme : "bootstrap",
+                    widthFixed: true,
+                    headerTemplate : '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon!
+                    // widget code contained in the jquery.tablesorter.widgets.js file
+                    // use the zebra stripe widget if you plan on hiding any rows (filter widget)
+                    widgets : [ "uitheme", "filter", "zebra"],
+                    widgetOptions : {
+                        zebra : ["even", "odd"],
+                        // reset filters button
+                        filter_reset : ".reset"
 
-                        }
                     }
+                }
             );
         },
         big_tables_jui: function(id_tabla) {

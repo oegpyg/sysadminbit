@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 import json
 import importlib
 
+
 class Dashboard(View):
     TemplateGet = None
     ModuleName = None
@@ -23,7 +24,7 @@ class Dashboard(View):
         SbLModule = importlib.import_module(self.ModuleName)
         SbLClass = getattr(SbLModule, self.ClassName)(username=request.user.username)
 
-        return  SbLClass.load_profile(request)
+        return SbLClass.load_profile(request)
 
         # return render(request,
         #               self.TemplateGet,
