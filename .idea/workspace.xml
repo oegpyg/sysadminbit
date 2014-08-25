@@ -88,7 +88,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="2" selection-start="801" selection-end="801" vertical-scroll-proportion="0.67232597" vertical-offset="108" max-vertical-offset="1026">
+            <state line="32" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.61120546" vertical-offset="216" max-vertical-offset="1044">
               <folding />
             </state>
           </provider>
@@ -665,7 +665,11 @@
       <created>1408974887272</created>
       <updated>1408974887272</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="postgresspass">
+      <created>1408974957386</created>
+      <updated>1408974957386</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -835,7 +839,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="2" selection-start="801" selection-end="801" vertical-scroll-proportion="0.67232597" vertical-offset="108" max-vertical-offset="1026">
+        <state line="32" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.61120546" vertical-offset="216" max-vertical-offset="1044">
           <folding />
         </state>
       </provider>

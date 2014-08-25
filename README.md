@@ -29,10 +29,11 @@ Crear acceso ssh mediante documentacion https://help.github.com/articles/generat
 * git remote add origin git@github.com:sysadminbit/sysadminbit.bit
 * git pull origin
 * git push origin master
+
 #Tambien se puede realizar en forma directa sin usar git remote add
 *git pull git@github.com:sysadminbit/sysadminbit.bit
 *git push git@github.com:sysadminbit/sysadminbit.bit
-.
+
 
 #Actualizacion
 git remote add origin https://username:password@github.com/sysadminbit/sysadminbit.git
