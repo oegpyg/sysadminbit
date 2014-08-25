@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" afterPath="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sysadminbit.iws" />
@@ -51,7 +52,7 @@
       <file leaf-file-name="Dashboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/sbdashboard/Dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="60" selection-start="1186" selection-end="1186" vertical-scroll-proportion="-7.4814816" vertical-offset="194" max-vertical-offset="1260">
+            <state line="62" column="45" selection-start="3271" selection-end="3271" vertical-scroll-proportion="-15.0" vertical-offset="711" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -60,7 +61,7 @@
       <file leaf-file-name="sbwindows.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbwindows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.45840406" vertical-offset="0" max-vertical-offset="3672">
+            <state line="141" column="4" selection-start="5906" selection-end="7359" vertical-scroll-proportion="0.12224109" vertical-offset="2466" max-vertical-offset="3546">
               <folding />
             </state>
           </provider>
@@ -599,7 +600,11 @@
       <created>1408920712503</created>
       <updated>1408920712503</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Create Modules Search Scheleton">
+      <created>1408921494643</created>
+      <updated>1408921494643</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -762,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sbdashboard/Dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="60" selection-start="1186" selection-end="1186" vertical-scroll-proportion="-7.4814816" vertical-offset="194" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbutils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="0" selection-start="3035" selection-end="3046" vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="5418">
@@ -776,9 +774,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sbdashboard/Dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="45" selection-start="3271" selection-end="3271" vertical-scroll-proportion="-15.0" vertical-offset="711" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbwindows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.45840406" vertical-offset="0" max-vertical-offset="3672">
+        <state line="141" column="4" selection-start="5906" selection-end="7359" vertical-scroll-proportion="0.12224109" vertical-offset="2466" max-vertical-offset="3546">
           <folding />
         </state>
       </provider>
