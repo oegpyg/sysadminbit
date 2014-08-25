@@ -2,7 +2,7 @@ sysadminbit
 ===========
 
 Software de multifuncional
-
+*Estado del Proyecto: Inicial - Maquetacion
 
 configuracion inicial
 =====================
@@ -29,7 +29,7 @@ git commit -m "Instacia primera de sysadminbit"
 git remote add origin git@github.com:sysadminbit/sysadminbit.bit
 git pull origin
 git push origin master
-#O TAMBIEN SE PUEDE HACER DIRECTO SIN USAR git remote add
+#Tambien se puede realizar en forma directa sin usar git remote add
 git pull git@github.com:sysadminbit/sysadminbit.bit
 git push git@github.com:sysadminbit/sysadminbit.bit
 .
