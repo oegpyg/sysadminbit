@@ -2,9 +2,9 @@ sysadminbit
 ===========
 
 Software de multifuncional
-*Estado del Proyecto: Inicial - Maquetacion
+* Estado del Proyecto: Inicial - Maquetacion
 
-configuracion inicial
+Configuracion Inicial
 =====================
 
 INSTALAR LOS SIGUIENTES PAQUETES INICIALES PARA EL SERVIDOR DE SYSADMINBIT
@@ -18,9 +18,9 @@ INSTALAR LOS SIGUIENTES PAQUETES INICIALES PARA EL SERVIDOR DE SYSADMINBIT
 * pip install django-extensions
 * pip install django-celery
 
-#configuracion inicial de git - de como realizar un commit inicial a github
-#crear acceso ssh mediante documentacion https://help.github.com/articles/generating-ssh-keys
-ssh -T git@github.com
+Configuracion inicial de git - de como realizar un commit inicial a github
+Crear acceso ssh mediante documentacion https://help.github.com/articles/generating-ssh-keys
+* ssh -T git@github.com
 
 mkdir ./ProjectoSysadminbit/; cd ./ProjectoSysadminbit/
 git init
