@@ -15,22 +15,21 @@ import importlib
 
 
 class Dashboard(View):
-    TemplateGet = None
-    ModuleName = None
-    ClassName = None
-
+    # TemplateGet = None
+    # ModuleName = None
+    # ClassName = None
     @method_decorator(login_required)
-    def get(self, request):
-        SbLModule = importlib.import_module(self.ModuleName)
-        SbLClass = getattr(SbLModule, self.ClassName)(username=request.user.username)
+    def get(self, request, *args, **kwargs):
+        SbLModule = importlib.import_module(kwargs.get('module_name'))
+        SbLClass = getattr(SbLModule, kwargs.get('class_name'))(username=request.user.username)
+        SbLMethod = getattr(SbLClass, kwargs.get('method_name'))
+        # return SbLClass.load_profile(request)
+        return SbLMethod(request)
 
-        return SbLClass.load_profile(request)
-
-        # return render(request,
-        #               self.TemplateGet,
-        #               status=200)
-
-    def post(self, request):
-        pass
-
+    def post(self, request, *args, **kwargs):
+        SbLModule = importlib.import_module(kwargs.get('module_name'))
+        SbLClass = getattr(SbLModule, kwargs.get('class_name'))(username=request.user.username)
+        SbLMethod = getattr(SbLClass, kwargs.get('method_name'))
+        # return SbLClass.load_profile(request)
+        return SbLMethod(request)
 

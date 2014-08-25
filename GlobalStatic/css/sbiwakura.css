@@ -7,3 +7,10 @@ body {
 .sbnavbar-form {
     margin-top: 8px;
 }
+
+#DataSearch {
+    position: fixed;
+    z-index: 4999;
+    background-color: #ffffff;
+    width: 20%;
+}
