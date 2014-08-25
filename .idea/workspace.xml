@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" afterPath="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysadminbit/settings.py" afterPath="$PROJECT_DIR$/sysadminbit/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sysadminbit.iws" />
@@ -40,6 +40,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sysadminbit/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="33" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.19524617" vertical-offset="1163" max-vertical-offset="1944">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sbutils.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbutils.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sbwindows.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sbwindows.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbwindows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="4" selection-start="5906" selection-end="7359" vertical-scroll-proportion="0.12224109" vertical-offset="2466" max-vertical-offset="3546">
+            <state line="12" column="6" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3546">
               <folding />
             </state>
           </provider>
@@ -102,7 +111,6 @@
         <option value="$PROJECT_DIR$/GlobalStatic/js/sbutils.js" />
         <option value="$PROJECT_DIR$/GlobalStatic/js/iwakura.js" />
         <option value="$PROJECT_DIR$/sbdashboard/decorators.py" />
-        <option value="$PROJECT_DIR$/sysadminbit/settings.py" />
         <option value="$PROJECT_DIR$/sbdashboard/dashboardmanag.py" />
         <option value="$PROJECT_DIR$/core/admin.py" />
         <option value="db-console:/8b1ff46e/bfc415a1-0b63-4488-bee2-bc2374f986b9/" />
@@ -112,6 +120,7 @@
         <option value="$PROJECT_DIR$/sbdashboard/views.py" />
         <option value="$PROJECT_DIR$/templates/sbdashboard/Dashboard.html" />
         <option value="$PROJECT_DIR$/GlobalStatic/js/sbwindows.js" />
+        <option value="$PROJECT_DIR$/sysadminbit/settings.py" />
       </list>
     </option>
   </component>
@@ -192,6 +201,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sbdashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sysadminbit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -604,7 +627,11 @@
       <created>1408921494643</created>
       <updated>1408921494643</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Modules Search in object">
+      <created>1408925186959</created>
+      <updated>1408925186959</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -626,7 +653,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27010623" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27010623" sideWeight="0.671521" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -668,7 +695,8 @@
     <MESSAGE value="accessgroup" />
     <MESSAGE value="AccessGroup module" />
     <MESSAGE value="Create Modules Search Scheleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Modules Search Scheleton" />
+    <MESSAGE value="Modules Search in object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modules Search in object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -687,13 +715,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sysadminbit/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="28" selection-start="1885" selection-end="1896" vertical-scroll-proportion="0.11050725" vertical-offset="1163" max-vertical-offset="1944">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +804,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GlobalStatic/js/sbwindows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="4" selection-start="5906" selection-end="7359" vertical-scroll-proportion="0.12224109" vertical-offset="2466" max-vertical-offset="3546">
+        <state line="12" column="6" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3546">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sysadminbit/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="33" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.19524617" vertical-offset="1163" max-vertical-offset="1944">
           <folding />
         </state>
       </provider>

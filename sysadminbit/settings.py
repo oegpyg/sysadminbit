@@ -69,7 +69,7 @@ DATABASES = {
         'NAME': 'sysadminbit',
         'HOST': 'localhost',
         'USER': 'sysadminbit',
-        'PASSWORD': '75ukuY0m1',
+        'PASSWORD': 'LorenzoLamas',
         'PORT': ''
     }
 }
