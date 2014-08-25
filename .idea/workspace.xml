@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="postgresspass">
+    <list default="true" id="5338d38e-8665-4ed5-a91a-93eb1ece09a5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -88,7 +88,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="2" selection-start="645" selection-end="645" vertical-scroll-proportion="0.67232597" vertical-offset="0" max-vertical-offset="1026">
+            <state line="28" column="2" selection-start="801" selection-end="801" vertical-scroll-proportion="0.67232597" vertical-offset="108" max-vertical-offset="1026">
               <folding />
             </state>
           </provider>
@@ -661,7 +661,11 @@
       <created>1408974825440</created>
       <updated>1408974825440</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="postgresspass">
+      <created>1408974887272</created>
+      <updated>1408974887272</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -726,9 +730,9 @@
     <MESSAGE value="AccessGroup module" />
     <MESSAGE value="Create Modules Search Scheleton" />
     <MESSAGE value="Modules Search in object" />
-    <MESSAGE value="postgresspass" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="postgresspass" />
+    <option name="LAST_COMMIT_MESSAGE" value="postgresspass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -831,7 +835,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="2" selection-start="645" selection-end="645" vertical-scroll-proportion="0.67232597" vertical-offset="0" max-vertical-offset="1026">
+        <state line="28" column="2" selection-start="801" selection-end="801" vertical-scroll-proportion="0.67232597" vertical-offset="108" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>

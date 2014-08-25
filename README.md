@@ -22,16 +22,16 @@ Configuracion inicial de git - de como realizar un commit inicial a github
 Crear acceso ssh mediante documentacion https://help.github.com/articles/generating-ssh-keys
 * ssh -T git@github.com
 
-mkdir ./ProjectoSysadminbit/; cd ./ProjectoSysadminbit/
-git init
-git add .
-git commit -m "Instacia primera de sysadminbit"
-git remote add origin git@github.com:sysadminbit/sysadminbit.bit
-git pull origin
-git push origin master
+* mkdir ./ProjectoSysadminbit/; cd ./ProjectoSysadminbit/
+* git init
+* git add .
+* git commit -m "Instacia primera de sysadminbit"
+* git remote add origin git@github.com:sysadminbit/sysadminbit.bit
+* git pull origin
+* git push origin master
 #Tambien se puede realizar en forma directa sin usar git remote add
-git pull git@github.com:sysadminbit/sysadminbit.bit
-git push git@github.com:sysadminbit/sysadminbit.bit
+*git pull git@github.com:sysadminbit/sysadminbit.bit
+*git push git@github.com:sysadminbit/sysadminbit.bit
 .
 
 #Actualizacion
