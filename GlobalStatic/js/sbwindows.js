@@ -40,6 +40,9 @@ var DataSearch = {
                 if ($(this).val().length < 3){
                     table.find('tr').addClass('hide');
                 }
+                if ($(this).val() == '*'){
+                    table.find('tr').removeClass('hide');
+                }
             });
         });
         $('.run').bind('click', function(){
