@@ -28,7 +28,7 @@ var DataSearch = {
             });
         });
         $(ele).on('focus',function(){
-            $('#sb-search-modules').on('keyup',function(event){
+            $(ele).on('keyup',function(event){
                 event.preventDefault();
                 if ($(this).val().length > 3){
                     table.find('tr').addClass('hide');
